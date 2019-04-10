@@ -26,6 +26,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     HostConfig hostConfig;
 
+
     /**
      * {@inheritDoc}
      * <p>
