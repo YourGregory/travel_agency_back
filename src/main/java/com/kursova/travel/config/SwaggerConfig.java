@@ -25,7 +25,6 @@ import java.time.LocalDate;
  */
 @Configuration
 @EnableSwagger2
-@Profile("local")
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class SwaggerConfig {
