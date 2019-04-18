@@ -54,6 +54,7 @@ public class JwtAuthorizationFilter extends AbstractAuthenticationProcessingFilt
                 SystemUser systemUser = jwtWebService.getSystemUser(authorizationToken);
                 permissionService.canBeAuthorized(systemUser);
 
+
                 authentication = new UsernamePasswordAuthenticationToken(
                         systemUser, StringUtils.EMPTY, systemUser.getAuthorities()
                 );
