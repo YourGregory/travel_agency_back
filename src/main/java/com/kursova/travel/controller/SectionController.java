@@ -3,6 +3,7 @@ package com.kursova.travel.controller;
 import com.kursova.travel.constants.Constant;
 import com.kursova.travel.entity.dto.SectionDTO;
 import com.kursova.travel.entity.request.CreateSectionRequest;
+import com.kursova.travel.entity.request.UpdateSectionRequest;
 import com.kursova.travel.security.SystemUser;
 import com.kursova.travel.service.web.SectionWebService;
 import io.swagger.annotations.ApiResponse;
@@ -34,8 +35,23 @@ public class SectionController {
             @ApiResponse(code = 400, message = "Bad request"),
             @ApiResponse(code = 403, message = "You are not allowed to create.")
     })
-    public void createSection(@RequestBody CreateSectionRequest request, @AuthenticationPrincipal SystemUser systemUser){
+    public void createSection(@RequestBody CreateSectionRequest request, @AuthenticationPrincipal SystemUser systemUser) {
         sectionWebService.createSection(request, systemUser);
+    }
+
+    @PostMapping(value = "/sections")
+    public ResponseEntity<SectionDTO> updateSection(@RequestBody UpdateSectionRequest request) {
+        return ResponseEntity.ok(sectionWebService.updateSection(request));
+    }
+
+    @GetMapping(value = "/sections/{id}")
+    public ResponseEntity<SectionDTO> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(sectionWebService.getById(id));
+    }
+
+    @PostMapping(value = "/section/{sectionId}/trainer/{trainerId}")
+    public ResponseEntity<SectionDTO> changeTrainer(@PathVariable Long sectionId, @PathVariable Long trainerId) {
+        return ResponseEntity.ok(sectionWebService.changeTrainer(sectionId, trainerId));
     }
 
     @GetMapping("admin/sections")

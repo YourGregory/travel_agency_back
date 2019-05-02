@@ -5,6 +5,7 @@ import com.kursova.travel.entity.model.AdminUser;
 import com.kursova.travel.entity.model.Section;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.entity.request.CreateSectionRequest;
+import com.kursova.travel.entity.request.UpdateSectionRequest;
 import com.kursova.travel.security.SystemUser;
 import com.kursova.travel.service.AdminService;
 import com.kursova.travel.service.SectionService;
@@ -55,6 +56,32 @@ public class SectionWebService {
         return sectionService.getAllByTrainer(trainer).stream()
                 .map(this::mapToSectionDto)
                 .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public SectionDTO changeTrainer(Long sectionId, Long trainerId) {
+        Section section = sectionService.getById(sectionId);
+        Tourist trainer = touristService.getById(trainerId);
+
+        section.setTrainer(trainer);
+
+        Section updatedSection = sectionService.update(section);
+        return mapToSectionDto(updatedSection);
+    }
+
+    @Transactional(readOnly = true)
+    public SectionDTO getById(Long id) {
+        Section section = sectionService.getById(id);
+        return mapToSectionDto(section);
+    }
+
+    @Transactional
+    public SectionDTO updateSection(UpdateSectionRequest request) {
+        Section section = sectionService.getById(request.getSectionId());
+        section.setName(request.getName());
+        section.setSectionType(request.getSectionType());
+        Section updatedSection = sectionService.update(section);
+        return mapToSectionDto(updatedSection);
     }
 
     private SectionDTO mapToSectionDto(Section section) {
