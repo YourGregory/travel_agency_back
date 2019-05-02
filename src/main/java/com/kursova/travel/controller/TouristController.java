@@ -35,7 +35,7 @@ public class TouristController {
             @ApiResponse(code = 400, message = "Bad Request"),
             @ApiResponse(code = 403, message = "You are not allowed to create user")
     })
-    public ResponseEntity<TouristDTO> updateByAdmin(UpdateTouristByAdminRequest request) {
+    public ResponseEntity<TouristDTO> updateByAdmin(@RequestBody UpdateTouristByAdminRequest request) {
         permissionService.canUpdateEmail(request.getId(), request.getEmail());
         return ResponseEntity.ok(touristWebService.updateByAdmin(request));
     }
