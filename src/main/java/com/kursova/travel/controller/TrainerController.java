@@ -24,7 +24,7 @@ public class TrainerController {
 
     TouristWebService touristWebService;
 
-    @GetMapping("/trainers")
+    @GetMapping("trainers")
     @PreAuthorize("@permissionService.isAdmin() || @permissionService.isTrainer()")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Get all Trainers", response = TouristDTO.class, responseContainer = "List"),

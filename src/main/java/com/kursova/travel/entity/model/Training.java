@@ -26,4 +26,7 @@ public class Training extends AbstractVersional {
     @Column(nullable = false)
     LocalDateTime timeOfTraining;
 
+    @Column(nullable = false)
+    Boolean isCompleted = false;
+
 }

@@ -27,7 +27,7 @@ public class SectionController {
 
     SectionWebService sectionWebService;
 
-    @PutMapping(value = "/sections")
+    @PutMapping(value = "sections")
     @ResponseStatus(value = HttpStatus.OK)
     @PreAuthorize("@permissionService.isAdmin()")
     @ApiResponses(value = {
@@ -39,17 +39,17 @@ public class SectionController {
         sectionWebService.createSection(request, systemUser);
     }
 
-    @PostMapping(value = "/sections")
+    @PostMapping(value = "sections")
     public ResponseEntity<SectionDTO> updateSection(@RequestBody UpdateSectionRequest request) {
         return ResponseEntity.ok(sectionWebService.updateSection(request));
     }
 
-    @GetMapping(value = "/sections/{id}")
+    @GetMapping(value = "sections/{id}")
     public ResponseEntity<SectionDTO> getById(@PathVariable Long id) {
         return ResponseEntity.ok(sectionWebService.getById(id));
     }
 
-    @PostMapping(value = "/section/{sectionId}/trainer/{trainerId}")
+    @PostMapping(value = "section/{sectionId}/trainer/{trainerId}")
     public ResponseEntity<SectionDTO> changeTrainer(@PathVariable Long sectionId, @PathVariable Long trainerId) {
         return ResponseEntity.ok(sectionWebService.changeTrainer(sectionId, trainerId));
     }

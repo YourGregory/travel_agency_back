@@ -6,6 +6,7 @@ import com.kursova.travel.entity.model.Group;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.entity.request.CreateGroupRequest;
 import com.kursova.travel.entity.request.TouristsToGroup;
+import com.kursova.travel.security.SystemUser;
 import com.kursova.travel.service.GroupService;
 import com.kursova.travel.service.TouristService;
 import lombok.AccessLevel;
@@ -90,4 +91,23 @@ public class GroupWebService {
         return modelMapper.map(tourist, TouristDTO.class);
     }
 
+    @Transactional(readOnly = true)
+    public List<GroupDTO> getGroups(SystemUser systemUser) {
+        List<Group> result = null;
+
+        if (systemUser.isAdmin() || systemUser.isSuperAdmin()) {
+            result = groupService.getGroupsByAdmin();
+        } else if (systemUser.isTrainer()) {
+            result = groupService.getGroupsByTrainer(systemUser);
+        }
+
+        return result.stream()
+                .map(this::mapToGroupDto)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public GroupDTO getGroupById(Long groupId) {
+        return mapToGroupDto(groupService.getById(groupId));
+    }
 }

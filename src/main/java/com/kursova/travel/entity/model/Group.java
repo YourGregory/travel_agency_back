@@ -29,4 +29,5 @@ public class Group extends AbstractVersional {
 
     @OneToMany(fetch = FetchType.LAZY)
     List<Tourist> tourists = new ArrayList<>();
+
 }
