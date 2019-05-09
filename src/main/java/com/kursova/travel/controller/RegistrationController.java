@@ -1,6 +1,7 @@
 package com.kursova.travel.controller;
 
 import com.kursova.travel.constants.Constant;
+import com.kursova.travel.entity.request.CreateAdminRequest;
 import com.kursova.travel.entity.request.CreateTouristRequest;
 import com.kursova.travel.service.PermissionService;
 import com.kursova.travel.service.web.RegistrationWebService;
@@ -39,6 +40,20 @@ public class RegistrationController {
     public void createTourist(@RequestBody @Validated CreateTouristRequest request) {
         permissionService.canCreateWithEmail(request.getEmail());
         registrationWebService.createTourist(request);
+    }
+
+
+    @PostMapping(value = "admins")
+    @ResponseStatus(value = HttpStatus.CREATED)
+    @PreAuthorize("@permissionService.isSuperAdmin()")
+    @ApiResponses(value = {
+            @ApiResponse(code = 201, message = "Admin created"),
+            @ApiResponse(code = 401, message = "Bad credentials"),
+            @ApiResponse(code = 403, message = "You are not allowed to create user")
+    })
+    public void createAdmin(@RequestBody @Validated CreateAdminRequest request) {
+        permissionService.canCreateWithEmail(request.getEmail());
+        registrationWebService.createAdmin(request);
     }
 
 }

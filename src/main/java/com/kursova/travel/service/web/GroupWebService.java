@@ -1,6 +1,7 @@
 package com.kursova.travel.service.web;
 
 import com.kursova.travel.entity.dto.GroupDTO;
+import com.kursova.travel.entity.dto.TouristDTO;
 import com.kursova.travel.entity.model.Group;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.entity.request.CreateGroupRequest;
@@ -9,6 +10,7 @@ import com.kursova.travel.service.GroupService;
 import com.kursova.travel.service.TouristService;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +23,8 @@ public class GroupWebService {
 
     GroupService groupService;
     TouristService touristService;
+
+    ModelMapper modelMapper;
 
     @Transactional
     public void createGroup(CreateGroupRequest request) {
@@ -74,4 +78,16 @@ public class GroupWebService {
 
         return groupDTO;
     }
+
+    @Transactional(readOnly = true)
+    public List<TouristDTO> getTouristsByGroup(Long groupId) {
+        return groupService.getById(groupId).getTourists().stream()
+                .map(this::mapTouristToTrainerDto)
+                .collect(Collectors.toList());
+    }
+
+    private TouristDTO mapTouristToTrainerDto(Tourist tourist) {
+        return modelMapper.map(tourist, TouristDTO.class);
+    }
+
 }

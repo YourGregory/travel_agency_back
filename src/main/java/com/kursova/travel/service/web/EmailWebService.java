@@ -2,6 +2,7 @@ package com.kursova.travel.service.web;
 
 import com.kursova.travel.constants.EmailConstant;
 import com.kursova.travel.email.EmailBuilder;
+import com.kursova.travel.entity.base.AbstractUser;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.service.base.AbstractEmailService;
 import freemarker.template.Configuration;
@@ -26,7 +27,7 @@ public class EmailWebService extends AbstractEmailService {
         this.environment = environment;
     }
 
-    public void sendFirstPassword(Tourist tourist, String password) {
+    public void sendFirstPassword(AbstractUser abstractUser, String password) {
         Map<String, String> model = new HashMap<>();
 
         model.put(EmailConstant.PASSWORD, password);
@@ -34,7 +35,7 @@ public class EmailWebService extends AbstractEmailService {
         EmailBuilder builder = EmailBuilder.builder()
                 .subject("Created")
                 .model(model)
-                .abstractUser(tourist)
+                .abstractUser(abstractUser)
                 .build();
 
         sendEmail(builder);
