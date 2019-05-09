@@ -15,6 +15,9 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -55,4 +58,11 @@ public class TrainingWebService {
     }
 
 
+    @Transactional(readOnly = true)
+    public List<TrainingDTO> getAllBySectionId(Long sectionId) {
+        Section section = sectionService.getById(sectionId);
+        return section.getScheduler().getTraining().stream()
+                .map(this::mapToTrainingDto)
+                .collect(Collectors.toList());
+    }
 }

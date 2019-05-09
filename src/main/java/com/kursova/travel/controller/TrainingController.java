@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor
@@ -29,6 +31,11 @@ public class TrainingController {
     @PutMapping(value = "trainings")
     public ResponseEntity<TrainingDTO> updateTrainingTime(UpdateTrainingTime request) {
         return ResponseEntity.ok(trainingWebService.updateTrainingTime(request));
+    }
+
+    @GetMapping(value = "section/{sectionId}/trainigs")
+    public ResponseEntity<List<TrainingDTO>> getAllBySectionId(@PathVariable Long sectionId) {
+        return ResponseEntity.ok(trainingWebService.getAllBySectionId(sectionId));
     }
 
 }
