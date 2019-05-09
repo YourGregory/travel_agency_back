@@ -1,6 +1,7 @@
 package com.kursova.travel.controller;
 
 import com.kursova.travel.constants.Constant;
+import com.kursova.travel.entity.dto.GroupDTO;
 import com.kursova.travel.entity.dto.SectionDTO;
 import com.kursova.travel.entity.request.TouristsToGroup;
 import com.kursova.travel.entity.request.CreateGroupRequest;
@@ -35,7 +36,7 @@ public class GroupController {
     }
 
     @PostMapping(value = "/groups/{groupId}/trainer/{trainerId}")
-    public ResponseEntity<SectionDTO> changeTrainer(@PathVariable Long groupId, @PathVariable Long trainerId) {
+    public ResponseEntity<GroupDTO> changeTrainer(@PathVariable Long groupId, @PathVariable Long trainerId) {
         return ResponseEntity.ok(groupWebService.changeTrainer(groupId, trainerId));
     }
 
