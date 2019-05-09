@@ -2,6 +2,7 @@ package com.kursova.travel.service;
 
 
 import com.kursova.travel.entity.dictionary.UserRole;
+import com.kursova.travel.entity.dto.TouristDTO;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.repository.TouristRepository;
 import com.kursova.travel.service.base.DefaultCrudSupport;
@@ -39,5 +40,21 @@ public class TouristService extends DefaultCrudSupport<Tourist> {
     @Transactional(readOnly = true)
     public List<Tourist> findAllTrainers() {
         return repository.findAllByUserRole(UserRole.TRAINER);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Tourist> findAllSportsmans() {
+        return repository.findAllByUserRole(UserRole.SPORTSMAN);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Tourist> findAllAmateurs() {
+        return repository.findAllByUserRole(UserRole.AMATEUR);
+    }
+
+    public List<Tourist> findAllTourist() {
+        List<Tourist> tourists = findAllSportsmans();
+        tourists.addAll(findAllAmateurs());
+        return tourists;
     }
 }

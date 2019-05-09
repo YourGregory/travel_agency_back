@@ -1,15 +1,15 @@
 package com.kursova.travel.controller;
 
 import com.kursova.travel.constants.Constant;
+import com.kursova.travel.entity.dto.SectionDTO;
+import com.kursova.travel.entity.request.TouristsToGroup;
 import com.kursova.travel.entity.request.CreateGroupRequest;
 import com.kursova.travel.service.web.GroupWebService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -21,7 +21,22 @@ public class GroupController {
 
     @PutMapping(value = "groups")
     public void createGroup(@RequestBody CreateGroupRequest request) {
+        groupWebService.createGroup(request);
+    }
 
+    @PutMapping(value = "groups/add/tourists")
+    public void addTourists(@RequestBody TouristsToGroup request) {
+        groupWebService.addTouristToGroup(request);
+    }
+
+    @PutMapping(value = "groups/remove/tourists")
+    public void removeTourists(@RequestBody TouristsToGroup request) {
+        groupWebService.removeTouristToGroup(request);
+    }
+
+    @PostMapping(value = "/groups/{groupId}/trainer/{trainerId}")
+    public ResponseEntity<SectionDTO> changeTrainer(@PathVariable Long groupId, @PathVariable Long trainerId) {
+        return ResponseEntity.ok(groupWebService.changeTrainer(groupId, trainerId));
     }
 
 }

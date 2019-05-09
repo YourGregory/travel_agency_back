@@ -8,6 +8,7 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -27,5 +28,5 @@ public class Group extends AbstractVersional {
     Tourist trainer;
 
     @OneToMany(fetch = FetchType.LAZY)
-    List<Tourist> tourists;
+    List<Tourist> tourists = new ArrayList<>();
 }

@@ -18,6 +18,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor
@@ -68,6 +70,11 @@ public class TouristController {
                                                     UpdateTouristProfileRequest request) {
         permissionService.canUpdateEmail(systemUser, request.getEmail());
         return ResponseEntity.ok(touristWebService.updateProfile(systemUser, request));
+    }
+
+    @GetMapping(value = "tourists")
+    public ResponseEntity<List<TouristDTO>> getAllTourist() {
+        return ResponseEntity.ok(touristWebService.getAllTourists());
     }
 
 }

@@ -75,4 +75,26 @@ public class TouristWebService {
         Tourist trainer = touristService.getById(id);
         return mapTouristToTrainerDto(trainer);
     }
+
+    @Transactional(readOnly = true)
+    public List<TouristDTO> getAllSportsmans() {
+        return touristService.findAllSportsmans().stream()
+                .map(this::mapTouristToTrainerDto)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<TouristDTO> getAllAmateurs() {
+        return touristService.findAllAmateurs().stream()
+                .map(this::mapTouristToTrainerDto)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<TouristDTO> getAllTourists() {
+        return touristService.findAllTourist().stream()
+                .map(this::mapTouristToTrainerDto)
+                .collect(Collectors.toList());
+    }
+
 }
