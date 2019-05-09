@@ -1,17 +1,14 @@
 package com.kursova.travel.entity.model;
 
 import com.kursova.travel.entity.base.AbstractVersional;
+import com.kursova.travel.entity.dictionary.CampaignType;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Getter
@@ -34,5 +31,9 @@ public class Campaign extends AbstractVersional {
     List<Tourist> tourists;
 
     Boolean isPlaned;
+
+    @Column(nullable = false)
+    @Enumerated(value = EnumType.STRING)
+    CampaignType campaignType;
 
 }

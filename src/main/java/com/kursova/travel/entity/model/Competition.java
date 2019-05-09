@@ -7,11 +7,8 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.management.openmbean.CompositeType;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
