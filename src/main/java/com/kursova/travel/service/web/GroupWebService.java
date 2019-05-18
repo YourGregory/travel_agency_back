@@ -10,6 +10,7 @@ import com.kursova.travel.security.SystemUser;
 import com.kursova.travel.service.GroupService;
 import com.kursova.travel.service.TouristService;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class GroupWebService {
 
