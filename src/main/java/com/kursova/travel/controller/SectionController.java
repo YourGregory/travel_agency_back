@@ -17,6 +17,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -35,12 +36,12 @@ public class SectionController {
             @ApiResponse(code = 400, message = "Bad request"),
             @ApiResponse(code = 403, message = "You are not allowed to create.")
     })
-    public void createSection(@RequestBody CreateSectionRequest request, @AuthenticationPrincipal SystemUser systemUser) {
+    public void createSection(@Valid @RequestBody CreateSectionRequest request, @AuthenticationPrincipal SystemUser systemUser) {
         sectionWebService.createSection(request, systemUser);
     }
 
     @PostMapping(value = "sections")
-    public ResponseEntity<SectionDTO> updateSection(@RequestBody UpdateSectionRequest request) {
+    public ResponseEntity<SectionDTO> updateSection(@Valid @RequestBody UpdateSectionRequest request) {
         return ResponseEntity.ok(sectionWebService.updateSection(request));
     }
 
