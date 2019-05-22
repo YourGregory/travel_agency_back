@@ -24,7 +24,6 @@ public class Scheduler extends AbstractVersional {
     @OneToMany(fetch = FetchType.LAZY)
     List<Training> training = new ArrayList<>();
 
-    @Column(nullable = false)
     String place;
 
 }

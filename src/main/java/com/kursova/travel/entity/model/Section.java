@@ -32,7 +32,7 @@ public class Section extends AbstractVersional {
     @Enumerated(value = EnumType.STRING)
     SectionType sectionType;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    Scheduler scheduler = new Scheduler();
+    @OneToOne(fetch = FetchType.LAZY, orphanRemoval = true)
+    Scheduler scheduler;
 
 }
