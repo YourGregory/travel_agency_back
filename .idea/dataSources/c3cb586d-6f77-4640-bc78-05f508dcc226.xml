@@ -4,72 +4,83 @@
     <root id="1">
       <ServerVersion>11.2</ServerVersion>
     </root>
-    <database id="2" parent="1" name="postgres">
+    <database id="2" parent="1" name="operf">
+      <ObjectId>49209</ObjectId>
+      <StateNumber>763</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="postgres">
       <ObjectId>13012</ObjectId>
       <Comment>default administrative connection database</Comment>
       <StateNumber>567</StateNumber>
       <Owner>postgres</Owner>
     </database>
-    <database id="3" parent="1" name="travel_agency">
-      <ObjectId>16393</ObjectId>
-      <StateNumber>570</StateNumber>
+    <database id="4" parent="1" name="travel_agency">
+      <ObjectId>40960</ObjectId>
+      <StateNumber>630</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>860</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2846</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|16405|16407|1
-sequence|table|16984|16986|1
-sequence|table|16995|16997|1
-sequence|table|17009|17011|1
-sequence|table|17020|17022|1
-sequence|table|17031|17033|1
-sequence|table|17039|17041|1
-sequence|table|17050|17052|1
-sequence|table|17058|17060|1
-sequence|table|17069|17071|1
+      <Relations>sequence|table|49163|49165|1
+sequence|table|49174|49176|1
+sequence|table|57410|57412|1
+sequence|table|57421|57423|1
+sequence|table|57435|57437|1
+sequence|table|57446|57448|1
+sequence|table|57457|57459|1
+sequence|table|57465|57467|1
+sequence|table|57476|57478|1
+sequence|table|57487|57489|1
+sequence|table|57498|57500|1
 </Relations>
     </database>
-    <role id="4" parent="1" name="pg_execute_server_program">
+    <database id="5" parent="1" name="ui">
+      <ObjectId>32768</ObjectId>
+      <StateNumber>585</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="6" parent="1" name="pg_execute_server_program">
       <ObjectId>4571</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="5" parent="1" name="pg_monitor">
+    <role id="7" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="6" parent="1" name="pg_read_all_settings">
+    <role id="8" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="7" parent="1" name="pg_read_all_stats">
+    <role id="9" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="8" parent="1" name="pg_read_server_files">
+    <role id="10" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="9" parent="1" name="pg_signal_backend">
+    <role id="11" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="10" parent="1" name="pg_stat_scan_tables">
+    <role id="12" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="11" parent="1" name="pg_write_server_files">
+    <role id="13" parent="1" name="pg_write_server_files">
       <ObjectId>4570</ObjectId>
       <Inherit>1</Inherit>
       <ConnectionLimit>-1</ConnectionLimit>
     </role>
-    <role id="12" parent="1" name="postgres">
+    <role id="14" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
       <Inherit>1</Inherit>
@@ -80,43 +91,43 @@ sequence|table|17069|17071|1
       <ConnectionLimit>-1</ConnectionLimit>
       <BypassRls>1</BypassRls>
     </role>
-    <schema id="13" parent="3" name="information_schema">
+    <schema id="15" parent="4" name="information_schema">
       <ObjectId>12716</ObjectId>
       <StateNumber>366</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="14" parent="3" name="pg_catalog">
+    <schema id="16" parent="4" name="pg_catalog">
       <ObjectId>11</ObjectId>
       <Comment>system catalog schema</Comment>
       <StateNumber>359</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="15" parent="3" name="pg_temp_1">
+    <schema id="17" parent="4" name="pg_temp_1">
       <ObjectId>11804</ObjectId>
       <StateNumber>121</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="16" parent="3" name="pg_toast">
+    <schema id="18" parent="4" name="pg_toast">
       <ObjectId>99</ObjectId>
       <Comment>reserved schema for TOAST tables</Comment>
       <StateNumber>1</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="17" parent="3" name="pg_toast_temp_1">
+    <schema id="19" parent="4" name="pg_toast_temp_1">
       <ObjectId>11805</ObjectId>
       <StateNumber>121</StateNumber>
       <Owner>postgres</Owner>
     </schema>
-    <schema id="18" parent="3" name="public">
+    <schema id="20" parent="4" name="public">
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>861</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2847</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <access-method id="19" parent="3" name="btree">
+    <access-method id="21" parent="4" name="btree">
       <ObjectId>403</ObjectId>
       <Comment>b-tree index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -124,7 +135,7 @@ sequence|table|17069|17071|1
       <HandlerId>330</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="20" parent="3" name="hash">
+    <access-method id="22" parent="4" name="hash">
       <ObjectId>405</ObjectId>
       <Comment>hash index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -132,7 +143,7 @@ sequence|table|17069|17071|1
       <HandlerId>331</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="21" parent="3" name="gist">
+    <access-method id="23" parent="4" name="gist">
       <ObjectId>783</ObjectId>
       <Comment>GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -140,7 +151,7 @@ sequence|table|17069|17071|1
       <HandlerId>332</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="22" parent="3" name="gin">
+    <access-method id="24" parent="4" name="gin">
       <ObjectId>2742</ObjectId>
       <Comment>GIN index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -148,7 +159,7 @@ sequence|table|17069|17071|1
       <HandlerId>333</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="23" parent="3" name="spgist">
+    <access-method id="25" parent="4" name="spgist">
       <ObjectId>4000</ObjectId>
       <Comment>SP-GiST index access method</Comment>
       <StateNumber>1</StateNumber>
@@ -156,7 +167,7 @@ sequence|table|17069|17071|1
       <HandlerId>334</HandlerId>
       <Type>index</Type>
     </access-method>
-    <access-method id="24" parent="3" name="brin">
+    <access-method id="26" parent="4" name="brin">
       <ObjectId>3580</ObjectId>
       <Comment>block range index (BRIN) access method</Comment>
       <StateNumber>1</StateNumber>
@@ -164,7 +175,7 @@ sequence|table|17069|17071|1
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <extension id="25" parent="3" name="plpgsql">
+    <extension id="27" parent="4" name="plpgsql">
       <ObjectId>12998</ObjectId>
       <Comment>PL/pgSQL procedural language</Comment>
       <StateNumber>519</StateNumber>
@@ -172,1113 +183,1217 @@ sequence|table|17069|17071|1
       <SchemaName>pg_catalog</SchemaName>
       <SchemaId>11</SchemaId>
     </extension>
-    <sequence id="26" parent="18" name="admin_users_id_seq">
-      <ObjectId>16984</ObjectId>
+    <sequence id="28" parent="20" name="admin_users_id_seq">
+      <ObjectId>57410</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="27" parent="18" name="campaigns_id_seq">
-      <ObjectId>16995</ObjectId>
+    <sequence id="29" parent="20" name="amateur_users_id_seq">
+      <ObjectId>49163</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>812</StateNumber>
+      <StateNumber>741</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="28" parent="18" name="competitions_id_seq">
-      <ObjectId>17009</ObjectId>
+    <sequence id="30" parent="20" name="campaigns_id_seq">
+      <ObjectId>57421</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>815</StateNumber>
+      <StateNumber>2794</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="29" parent="18" name="groups_id_seq">
-      <ObjectId>17020</ObjectId>
+    <sequence id="31" parent="20" name="competitions_id_seq">
+      <ObjectId>57435</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>817</StateNumber>
+      <StateNumber>2797</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="30" parent="18" name="routes_id_seq">
-      <ObjectId>17031</ObjectId>
+    <sequence id="32" parent="20" name="groups_id_seq">
+      <ObjectId>57446</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>819</StateNumber>
+      <StateNumber>2799</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="31" parent="18" name="schedulers_id_seq">
-      <ObjectId>17039</ObjectId>
+    <sequence id="33" parent="20" name="routes_id_seq">
+      <ObjectId>57457</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>820</StateNumber>
+      <StateNumber>2801</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="32" parent="18" name="sections_id_seq">
-      <ObjectId>17050</ObjectId>
+    <sequence id="34" parent="20" name="schedulers_id_seq">
+      <ObjectId>57465</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>822</StateNumber>
+      <StateNumber>2802</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="33" parent="18" name="tourists_id_seq">
-      <ObjectId>17058</ObjectId>
+    <sequence id="35" parent="20" name="sections_id_seq">
+      <ObjectId>57476</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>823</StateNumber>
+      <StateNumber>2804</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="34" parent="18" name="trainer_users_id_seq">
-      <ObjectId>16405</ObjectId>
+    <sequence id="36" parent="20" name="sportsman_users_id_seq">
+      <ObjectId>49174</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>572</StateNumber>
+      <StateNumber>742</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="35" parent="18" name="trainings_id_seq">
-      <ObjectId>17069</ObjectId>
+    <sequence id="37" parent="20" name="tourists_id_seq">
+      <ObjectId>57487</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>824</StateNumber>
+      <StateNumber>2805</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="36" parent="18" name="admin_users">
-      <ObjectId>16986</ObjectId>
+    <sequence id="38" parent="20" name="trainings_id_seq">
+      <ObjectId>57498</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>847</StateNumber>
-    </table>
-    <table id="37" parent="18" name="campaigns">
-      <ObjectId>16997</ObjectId>
+      <StateNumber>2806</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="39" parent="20" name="admin_users">
+      <ObjectId>57412</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>835</StateNumber>
+      <StateNumber>2837</StateNumber>
     </table>
-    <table id="38" parent="18" name="campaigns_routes">
-      <ObjectId>17003</ObjectId>
+    <table id="40" parent="20" name="amateur_users">
+      <ObjectId>49165</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>836</StateNumber>
+      <StateNumber>741</StateNumber>
     </table>
-    <table id="39" parent="18" name="campaigns_tourists">
-      <ObjectId>17006</ObjectId>
+    <table id="41" parent="20" name="campaigns">
+      <ObjectId>57423</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>838</StateNumber>
+      <StateNumber>2825</StateNumber>
     </table>
-    <table id="40" parent="18" name="competitions">
-      <ObjectId>17011</ObjectId>
+    <table id="42" parent="20" name="campaigns_routes">
+      <ObjectId>57429</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>841</StateNumber>
+      <StateNumber>2826</StateNumber>
     </table>
-    <table id="41" parent="18" name="competitions_tourists">
-      <ObjectId>17017</ObjectId>
+    <table id="43" parent="20" name="campaigns_tourists">
+      <ObjectId>57432</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>840</StateNumber>
+      <StateNumber>2828</StateNumber>
     </table>
-    <table id="42" parent="18" name="groups">
-      <ObjectId>17022</ObjectId>
+    <table id="44" parent="20" name="competitions">
+      <ObjectId>57437</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>842</StateNumber>
+      <StateNumber>2831</StateNumber>
     </table>
-    <table id="43" parent="18" name="groups_tourists">
-      <ObjectId>17028</ObjectId>
+    <table id="45" parent="20" name="competitions_tourists">
+      <ObjectId>57443</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>843</StateNumber>
+      <StateNumber>2830</StateNumber>
     </table>
-    <table id="44" parent="18" name="routes">
-      <ObjectId>17033</ObjectId>
+    <table id="46" parent="20" name="groups">
+      <ObjectId>57448</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>836</StateNumber>
+      <StateNumber>2832</StateNumber>
     </table>
-    <table id="45" parent="18" name="schedulers">
-      <ObjectId>17041</ObjectId>
+    <table id="47" parent="20" name="groups_tourists">
+      <ObjectId>57454</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>846</StateNumber>
+      <StateNumber>2833</StateNumber>
     </table>
-    <table id="46" parent="18" name="schedulers_training">
-      <ObjectId>17047</ObjectId>
+    <table id="48" parent="20" name="routes">
+      <ObjectId>57459</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>845</StateNumber>
+      <StateNumber>2826</StateNumber>
     </table>
-    <table id="47" parent="18" name="sections">
-      <ObjectId>17052</ObjectId>
+    <table id="49" parent="20" name="schedulers">
+      <ObjectId>57467</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>847</StateNumber>
+      <StateNumber>2836</StateNumber>
     </table>
-    <table id="48" parent="18" name="tourists">
-      <ObjectId>17060</ObjectId>
+    <table id="50" parent="20" name="schedulers_training">
+      <ObjectId>57473</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>835</StateNumber>
+      <StateNumber>2835</StateNumber>
     </table>
-    <table id="49" parent="18" name="trainer_users">
-      <ObjectId>16407</ObjectId>
+    <table id="51" parent="20" name="sections">
+      <ObjectId>57478</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>572</StateNumber>
+      <StateNumber>2837</StateNumber>
     </table>
-    <table id="50" parent="18" name="trainings">
-      <ObjectId>17071</ObjectId>
+    <table id="52" parent="20" name="sportsman_users">
+      <ObjectId>49176</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>845</StateNumber>
+      <StateNumber>742</StateNumber>
     </table>
-    <column id="51" parent="36" name="id">
+    <table id="53" parent="20" name="tourists">
+      <ObjectId>57489</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2825</StateNumber>
+    </table>
+    <table id="54" parent="20" name="trainings">
+      <ObjectId>57500</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2835</StateNumber>
+    </table>
+    <column id="55" parent="39" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <DefaultExpression>nextval(&apos;admin_users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="52" parent="36" name="created_at">
+    <column id="56" parent="39" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="53" parent="36" name="updated_at">
+    <column id="57" parent="39" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="54" parent="36" name="birthday">
+    <column id="58" parent="39" name="birthday">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="55" parent="36" name="email">
+    <column id="59" parent="39" name="email">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="56" parent="36" name="first_name">
+    <column id="60" parent="39" name="first_name">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="57" parent="36" name="last_name">
+    <column id="61" parent="39" name="last_name">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="36" name="password">
+    <column id="62" parent="39" name="password">
       <Position>8</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="36" name="phone">
+    <column id="63" parent="39" name="phone">
       <Position>9</Position>
       <DataType>varchar(25)|0s</DataType>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="60" parent="36" name="user_role">
+    <column id="64" parent="39" name="user_role">
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="61" parent="36" name="user_status">
+    <column id="65" parent="39" name="user_status">
       <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>811</StateNumber>
+      <StateNumber>2793</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="62" parent="36" name="admin_users_pkey">
-      <ObjectId>16993</ObjectId>
-      <StateNumber>811</StateNumber>
+    <index id="66" parent="39" name="admin_users_pkey">
+      <ObjectId>57419</ObjectId>
+      <StateNumber>2793</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="63" parent="36" name="ukcp8822350s9vtyww7xdbgeuvu">
-      <ObjectId>17078</ObjectId>
-      <StateNumber>826</StateNumber>
+    <index id="67" parent="39" name="ukcp8822350s9vtyww7xdbgeuvu">
+      <ObjectId>57507</ObjectId>
+      <StateNumber>2809</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="64" parent="36" name="idxcp8822350s9vtyww7xdbgeuvu">
-      <ObjectId>17077</ObjectId>
-      <StateNumber>825</StateNumber>
+    <index id="68" parent="39" name="idxcp8822350s9vtyww7xdbgeuvu">
+      <ObjectId>57506</ObjectId>
+      <StateNumber>2807</StateNumber>
       <ColNames>email</ColNames>
     </index>
-    <key id="65" parent="36" name="admin_users_pkey">
-      <ObjectId>16994</ObjectId>
-      <StateNumber>811</StateNumber>
+    <key id="69" parent="39" name="admin_users_pkey">
+      <ObjectId>57420</ObjectId>
+      <StateNumber>2793</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>admin_users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="66" parent="36" name="ukcp8822350s9vtyww7xdbgeuvu">
-      <ObjectId>17079</ObjectId>
-      <StateNumber>826</StateNumber>
+    <key id="70" parent="39" name="ukcp8822350s9vtyww7xdbgeuvu">
+      <ObjectId>57508</ObjectId>
+      <StateNumber>2809</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>ukcp8822350s9vtyww7xdbgeuvu</UnderlyingIndexName>
     </key>
-    <column id="67" parent="37" name="id">
+    <column id="71" parent="40" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>812</StateNumber>
-      <DefaultExpression>nextval(&apos;campaigns_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>741</StateNumber>
+      <DefaultExpression>nextval(&apos;amateur_users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="68" parent="37" name="created_at">
+    <column id="72" parent="40" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>812</StateNumber>
+      <StateNumber>741</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="69" parent="37" name="updated_at">
+    <column id="73" parent="40" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>812</StateNumber>
+      <StateNumber>741</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="70" parent="37" name="is_planed">
+    <column id="74" parent="40" name="email">
       <Position>4</Position>
-      <DataType>boolean|0s</DataType>
-      <StateNumber>812</StateNumber>
-      <TypeId>16</TypeId>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>741</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="71" parent="37" name="instructor_id">
+    <column id="75" parent="40" name="first_name">
       <Position>5</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>812</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>741</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <index id="72" parent="37" name="campaigns_pkey">
-      <ObjectId>17001</ObjectId>
-      <StateNumber>812</StateNumber>
+    <column id="76" parent="40" name="last_name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>741</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="77" parent="40" name="phone">
+      <Position>7</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <StateNumber>741</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="78" parent="40" name="user_role">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>741</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="79" parent="40" name="amateur_users_pkey">
+      <ObjectId>49172</ObjectId>
+      <StateNumber>741</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="73" parent="37" name="campaigns_pkey">
-      <ObjectId>17002</ObjectId>
-      <StateNumber>812</StateNumber>
+    <index id="80" parent="40" name="ukhij7pnplpugd1duaj570fg30w">
+      <ObjectId>49200</ObjectId>
+      <StateNumber>747</StateNumber>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="81" parent="40" name="idxhij7pnplpugd1duaj570fg30w">
+      <ObjectId>49199</ObjectId>
+      <StateNumber>746</StateNumber>
+      <ColNames>email</ColNames>
+    </index>
+    <key id="82" parent="40" name="amateur_users_pkey">
+      <ObjectId>49173</ObjectId>
+      <StateNumber>741</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>amateur_users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="83" parent="40" name="ukhij7pnplpugd1duaj570fg30w">
+      <ObjectId>49201</ObjectId>
+      <StateNumber>747</StateNumber>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>ukhij7pnplpugd1duaj570fg30w</UnderlyingIndexName>
+    </key>
+    <column id="84" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2794</StateNumber>
+      <DefaultExpression>nextval(&apos;campaigns_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="85" parent="41" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>2794</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="86" parent="41" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>2794</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="87" parent="41" name="campaign_type">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2794</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="88" parent="41" name="is_planed">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>2794</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="89" parent="41" name="instructor_id">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>2794</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="90" parent="41" name="campaigns_pkey">
+      <ObjectId>57427</ObjectId>
+      <StateNumber>2794</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="91" parent="41" name="campaigns_pkey">
+      <ObjectId>57428</ObjectId>
+      <StateNumber>2794</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>campaigns_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="74" parent="37" name="fkm560a21srdg2a3jxrf0prb627">
-      <ObjectId>17095</ObjectId>
-      <StateNumber>835</StateNumber>
+    <foreign-key id="92" parent="41" name="fkm560a21srdg2a3jxrf0prb627">
+      <ObjectId>57524</ObjectId>
+      <StateNumber>2825</StateNumber>
       <ColNames>instructor_id</ColNames>
-      <RefTableId>17060</RefTableId>
+      <RefTableId>57489</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tourists</RefTableName>
       <RefKeyName>tourists_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="75" parent="38" name="campaign_id">
+    <column id="93" parent="42" name="campaign_id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>813</StateNumber>
+      <StateNumber>2795</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="76" parent="38" name="routes_id">
+    <column id="94" parent="42" name="routes_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>813</StateNumber>
+      <StateNumber>2795</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="77" parent="38" name="uk_77ysx1dfw5idni6totvoe89c8">
-      <ObjectId>17080</ObjectId>
-      <StateNumber>827</StateNumber>
+    <index id="95" parent="42" name="uk_77ysx1dfw5idni6totvoe89c8">
+      <ObjectId>57509</ObjectId>
+      <StateNumber>2811</StateNumber>
       <ColNames>routes_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="78" parent="38" name="uk_77ysx1dfw5idni6totvoe89c8">
-      <ObjectId>17081</ObjectId>
-      <StateNumber>827</StateNumber>
+    <key id="96" parent="42" name="uk_77ysx1dfw5idni6totvoe89c8">
+      <ObjectId>57510</ObjectId>
+      <StateNumber>2811</StateNumber>
       <ColNames>routes_id</ColNames>
       <UnderlyingIndexName>uk_77ysx1dfw5idni6totvoe89c8</UnderlyingIndexName>
     </key>
-    <foreign-key id="79" parent="38" name="fkj7hw4iyl629scjcpl5i1fgfwh">
-      <ObjectId>17105</ObjectId>
-      <StateNumber>837</StateNumber>
+    <foreign-key id="97" parent="42" name="fkj7hw4iyl629scjcpl5i1fgfwh">
+      <ObjectId>57534</ObjectId>
+      <StateNumber>2827</StateNumber>
       <ColNames>campaign_id</ColNames>
-      <RefTableId>16997</RefTableId>
+      <RefTableId>57423</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>campaigns</RefTableName>
       <RefKeyName>campaigns_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="80" parent="38" name="fk6j80v1vat26kx2chr2g0q35f2">
-      <ObjectId>17100</ObjectId>
-      <StateNumber>836</StateNumber>
+    <foreign-key id="98" parent="42" name="fk6j80v1vat26kx2chr2g0q35f2">
+      <ObjectId>57529</ObjectId>
+      <StateNumber>2826</StateNumber>
       <ColNames>routes_id</ColNames>
-      <RefTableId>17033</RefTableId>
+      <RefTableId>57459</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>routes</RefTableName>
       <RefKeyName>routes_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="81" parent="39" name="campaign_id">
+    <column id="99" parent="43" name="campaign_id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>814</StateNumber>
+      <StateNumber>2796</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="82" parent="39" name="tourists_id">
+    <column id="100" parent="43" name="tourists_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>814</StateNumber>
+      <StateNumber>2796</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="83" parent="39" name="uk_r9fd9s3kxf8d74krawdixdwok">
-      <ObjectId>17082</ObjectId>
-      <StateNumber>828</StateNumber>
+    <index id="101" parent="43" name="uk_r9fd9s3kxf8d74krawdixdwok">
+      <ObjectId>57511</ObjectId>
+      <StateNumber>2813</StateNumber>
       <ColNames>tourists_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="84" parent="39" name="uk_r9fd9s3kxf8d74krawdixdwok">
-      <ObjectId>17083</ObjectId>
-      <StateNumber>828</StateNumber>
+    <key id="102" parent="43" name="uk_r9fd9s3kxf8d74krawdixdwok">
+      <ObjectId>57512</ObjectId>
+      <StateNumber>2813</StateNumber>
       <ColNames>tourists_id</ColNames>
       <UnderlyingIndexName>uk_r9fd9s3kxf8d74krawdixdwok</UnderlyingIndexName>
     </key>
-    <foreign-key id="85" parent="39" name="fks1d39ckqt77kll6k4874440c1">
-      <ObjectId>17115</ObjectId>
-      <StateNumber>839</StateNumber>
+    <foreign-key id="103" parent="43" name="fks1d39ckqt77kll6k4874440c1">
+      <ObjectId>57544</ObjectId>
+      <StateNumber>2829</StateNumber>
       <ColNames>campaign_id</ColNames>
-      <RefTableId>16997</RefTableId>
+      <RefTableId>57423</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>campaigns</RefTableName>
       <RefKeyName>campaigns_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="86" parent="39" name="fktm97h4f9gfgbifk3ka3m9nld8">
-      <ObjectId>17110</ObjectId>
-      <StateNumber>838</StateNumber>
+    <foreign-key id="104" parent="43" name="fktm97h4f9gfgbifk3ka3m9nld8">
+      <ObjectId>57539</ObjectId>
+      <StateNumber>2828</StateNumber>
       <ColNames>tourists_id</ColNames>
-      <RefTableId>17060</RefTableId>
+      <RefTableId>57489</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tourists</RefTableName>
       <RefKeyName>tourists_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="87" parent="40" name="id">
+    <column id="105" parent="44" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>815</StateNumber>
+      <StateNumber>2797</StateNumber>
       <DefaultExpression>nextval(&apos;competitions_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="88" parent="40" name="created_at">
+    <column id="106" parent="44" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>815</StateNumber>
+      <StateNumber>2797</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="89" parent="40" name="updated_at">
+    <column id="107" parent="44" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>815</StateNumber>
+      <StateNumber>2797</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="90" parent="40" name="name">
+    <column id="108" parent="44" name="name">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>815</StateNumber>
+      <StateNumber>2797</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="91" parent="40" name="time">
+    <column id="109" parent="44" name="time">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>815</StateNumber>
+      <StateNumber>2797</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <index id="92" parent="40" name="competitions_pkey">
-      <ObjectId>17015</ObjectId>
-      <StateNumber>815</StateNumber>
+    <index id="110" parent="44" name="competitions_pkey">
+      <ObjectId>57441</ObjectId>
+      <StateNumber>2797</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="93" parent="40" name="competitions_pkey">
-      <ObjectId>17016</ObjectId>
-      <StateNumber>815</StateNumber>
+    <key id="111" parent="44" name="competitions_pkey">
+      <ObjectId>57442</ObjectId>
+      <StateNumber>2797</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>competitions_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="94" parent="41" name="competition_id">
+    <column id="112" parent="45" name="competition_id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>816</StateNumber>
+      <StateNumber>2798</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="95" parent="41" name="tourists_id">
+    <column id="113" parent="45" name="tourists_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>816</StateNumber>
+      <StateNumber>2798</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="96" parent="41" name="uk_ns9ani51mvuccsta80pt7u6mg">
-      <ObjectId>17084</ObjectId>
-      <StateNumber>829</StateNumber>
+    <index id="114" parent="45" name="uk_ns9ani51mvuccsta80pt7u6mg">
+      <ObjectId>57513</ObjectId>
+      <StateNumber>2815</StateNumber>
       <ColNames>tourists_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="97" parent="41" name="uk_ns9ani51mvuccsta80pt7u6mg">
-      <ObjectId>17085</ObjectId>
-      <StateNumber>829</StateNumber>
+    <key id="115" parent="45" name="uk_ns9ani51mvuccsta80pt7u6mg">
+      <ObjectId>57514</ObjectId>
+      <StateNumber>2815</StateNumber>
       <ColNames>tourists_id</ColNames>
       <UnderlyingIndexName>uk_ns9ani51mvuccsta80pt7u6mg</UnderlyingIndexName>
     </key>
-    <foreign-key id="98" parent="41" name="fkfanpe3i74596l60glprx414ph">
-      <ObjectId>17125</ObjectId>
-      <StateNumber>841</StateNumber>
+    <foreign-key id="116" parent="45" name="fkfanpe3i74596l60glprx414ph">
+      <ObjectId>57554</ObjectId>
+      <StateNumber>2831</StateNumber>
       <ColNames>competition_id</ColNames>
-      <RefTableId>17011</RefTableId>
+      <RefTableId>57437</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>competitions</RefTableName>
       <RefKeyName>competitions_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="99" parent="41" name="fksecsgb7bn7sg6k1nhcx3o9thb">
-      <ObjectId>17120</ObjectId>
-      <StateNumber>840</StateNumber>
+    <foreign-key id="117" parent="45" name="fksecsgb7bn7sg6k1nhcx3o9thb">
+      <ObjectId>57549</ObjectId>
+      <StateNumber>2830</StateNumber>
       <ColNames>tourists_id</ColNames>
-      <RefTableId>17060</RefTableId>
+      <RefTableId>57489</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tourists</RefTableName>
       <RefKeyName>tourists_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="100" parent="42" name="id">
+    <column id="118" parent="46" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>817</StateNumber>
+      <StateNumber>2799</StateNumber>
       <DefaultExpression>nextval(&apos;groups_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="101" parent="42" name="created_at">
+    <column id="119" parent="46" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>817</StateNumber>
+      <StateNumber>2799</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="102" parent="42" name="updated_at">
+    <column id="120" parent="46" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>817</StateNumber>
+      <StateNumber>2799</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="103" parent="42" name="name">
+    <column id="121" parent="46" name="name">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>817</StateNumber>
+      <StateNumber>2799</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="104" parent="42" name="trainer_id">
+    <column id="122" parent="46" name="trainer_id">
       <Position>5</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>817</StateNumber>
+      <StateNumber>2799</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="105" parent="42" name="groups_pkey">
-      <ObjectId>17026</ObjectId>
-      <StateNumber>817</StateNumber>
+    <index id="123" parent="46" name="groups_pkey">
+      <ObjectId>57452</ObjectId>
+      <StateNumber>2799</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="106" parent="42" name="uk_8mf0is8024pqmwjxgldfe54l7">
-      <ObjectId>17086</ObjectId>
-      <StateNumber>830</StateNumber>
+    <index id="124" parent="46" name="uk_8mf0is8024pqmwjxgldfe54l7">
+      <ObjectId>57515</ObjectId>
+      <StateNumber>2817</StateNumber>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="107" parent="42" name="groups_pkey">
-      <ObjectId>17027</ObjectId>
-      <StateNumber>817</StateNumber>
+    <key id="125" parent="46" name="groups_pkey">
+      <ObjectId>57453</ObjectId>
+      <StateNumber>2799</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>groups_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="108" parent="42" name="uk_8mf0is8024pqmwjxgldfe54l7">
-      <ObjectId>17087</ObjectId>
-      <StateNumber>830</StateNumber>
+    <key id="126" parent="46" name="uk_8mf0is8024pqmwjxgldfe54l7">
+      <ObjectId>57516</ObjectId>
+      <StateNumber>2817</StateNumber>
       <ColNames>name</ColNames>
       <UnderlyingIndexName>uk_8mf0is8024pqmwjxgldfe54l7</UnderlyingIndexName>
     </key>
-    <foreign-key id="109" parent="42" name="fkp4nhsqdlkbbiek93aglj81452">
-      <ObjectId>17130</ObjectId>
-      <StateNumber>842</StateNumber>
+    <foreign-key id="127" parent="46" name="fkp4nhsqdlkbbiek93aglj81452">
+      <ObjectId>57559</ObjectId>
+      <StateNumber>2832</StateNumber>
       <ColNames>trainer_id</ColNames>
-      <RefTableId>17060</RefTableId>
+      <RefTableId>57489</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tourists</RefTableName>
       <RefKeyName>tourists_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="110" parent="43" name="group_id">
+    <column id="128" parent="47" name="group_id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>818</StateNumber>
+      <StateNumber>2800</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="111" parent="43" name="tourists_id">
+    <column id="129" parent="47" name="tourists_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>818</StateNumber>
+      <StateNumber>2800</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="112" parent="43" name="uk_43wjvrmxsk8ik381lwe243rbi">
-      <ObjectId>17088</ObjectId>
-      <StateNumber>831</StateNumber>
+    <index id="130" parent="47" name="uk_43wjvrmxsk8ik381lwe243rbi">
+      <ObjectId>57517</ObjectId>
+      <StateNumber>2819</StateNumber>
       <ColNames>tourists_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="113" parent="43" name="uk_43wjvrmxsk8ik381lwe243rbi">
-      <ObjectId>17089</ObjectId>
-      <StateNumber>831</StateNumber>
+    <key id="131" parent="47" name="uk_43wjvrmxsk8ik381lwe243rbi">
+      <ObjectId>57518</ObjectId>
+      <StateNumber>2819</StateNumber>
       <ColNames>tourists_id</ColNames>
       <UnderlyingIndexName>uk_43wjvrmxsk8ik381lwe243rbi</UnderlyingIndexName>
     </key>
-    <foreign-key id="114" parent="43" name="fkj6xcnraseiqqs5bff7kap3ykt">
-      <ObjectId>17140</ObjectId>
-      <StateNumber>844</StateNumber>
+    <foreign-key id="132" parent="47" name="fkj6xcnraseiqqs5bff7kap3ykt">
+      <ObjectId>57569</ObjectId>
+      <StateNumber>2834</StateNumber>
       <ColNames>group_id</ColNames>
-      <RefTableId>17022</RefTableId>
+      <RefTableId>57448</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>groups</RefTableName>
       <RefKeyName>groups_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="115" parent="43" name="fkdvm0al606wwismlxw9sqge5xg">
-      <ObjectId>17135</ObjectId>
-      <StateNumber>843</StateNumber>
+    <foreign-key id="133" parent="47" name="fkdvm0al606wwismlxw9sqge5xg">
+      <ObjectId>57564</ObjectId>
+      <StateNumber>2833</StateNumber>
       <ColNames>tourists_id</ColNames>
-      <RefTableId>17060</RefTableId>
+      <RefTableId>57489</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tourists</RefTableName>
       <RefKeyName>tourists_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="116" parent="44" name="id">
+    <column id="134" parent="48" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>819</StateNumber>
+      <StateNumber>2801</StateNumber>
       <DefaultExpression>nextval(&apos;routes_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="117" parent="44" name="created_at">
+    <column id="135" parent="48" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>819</StateNumber>
+      <StateNumber>2801</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="118" parent="44" name="updated_at">
+    <column id="136" parent="48" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>819</StateNumber>
+      <StateNumber>2801</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="119" parent="44" name="end_of_route">
+    <column id="137" parent="48" name="end_of_route">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>819</StateNumber>
+      <StateNumber>2801</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="120" parent="44" name="start_of_route">
+    <column id="138" parent="48" name="start_of_route">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>819</StateNumber>
+      <StateNumber>2801</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="121" parent="44" name="time">
+    <column id="139" parent="48" name="time">
       <Position>6</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>819</StateNumber>
+      <StateNumber>2801</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <index id="122" parent="44" name="routes_pkey">
-      <ObjectId>17037</ObjectId>
-      <StateNumber>819</StateNumber>
+    <index id="140" parent="48" name="routes_pkey">
+      <ObjectId>57463</ObjectId>
+      <StateNumber>2801</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="123" parent="44" name="routes_pkey">
-      <ObjectId>17038</ObjectId>
-      <StateNumber>819</StateNumber>
+    <key id="141" parent="48" name="routes_pkey">
+      <ObjectId>57464</ObjectId>
+      <StateNumber>2801</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>routes_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="124" parent="45" name="id">
+    <column id="142" parent="49" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>820</StateNumber>
+      <StateNumber>2802</StateNumber>
       <DefaultExpression>nextval(&apos;schedulers_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="125" parent="45" name="created_at">
+    <column id="143" parent="49" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>820</StateNumber>
+      <StateNumber>2802</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="126" parent="45" name="updated_at">
+    <column id="144" parent="49" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>820</StateNumber>
+      <StateNumber>2802</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="127" parent="45" name="place">
+    <column id="145" parent="49" name="place">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>820</StateNumber>
+      <StateNumber>2802</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="128" parent="45" name="schedulers_pkey">
-      <ObjectId>17045</ObjectId>
-      <StateNumber>820</StateNumber>
+    <index id="146" parent="49" name="schedulers_pkey">
+      <ObjectId>57471</ObjectId>
+      <StateNumber>2802</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="129" parent="45" name="schedulers_pkey">
-      <ObjectId>17046</ObjectId>
-      <StateNumber>820</StateNumber>
+    <key id="147" parent="49" name="schedulers_pkey">
+      <ObjectId>57472</ObjectId>
+      <StateNumber>2802</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>schedulers_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="130" parent="46" name="scheduler_id">
+    <column id="148" parent="50" name="scheduler_id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>821</StateNumber>
+      <StateNumber>2803</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="131" parent="46" name="training_id">
+    <column id="149" parent="50" name="training_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>821</StateNumber>
+      <StateNumber>2803</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="132" parent="46" name="uk_gca6cbgyickrv48tm39m6t0ib">
-      <ObjectId>17090</ObjectId>
-      <StateNumber>832</StateNumber>
+    <index id="150" parent="50" name="uk_gca6cbgyickrv48tm39m6t0ib">
+      <ObjectId>57519</ObjectId>
+      <StateNumber>2821</StateNumber>
       <ColNames>training_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="133" parent="46" name="uk_gca6cbgyickrv48tm39m6t0ib">
-      <ObjectId>17091</ObjectId>
-      <StateNumber>832</StateNumber>
+    <key id="151" parent="50" name="uk_gca6cbgyickrv48tm39m6t0ib">
+      <ObjectId>57520</ObjectId>
+      <StateNumber>2821</StateNumber>
       <ColNames>training_id</ColNames>
       <UnderlyingIndexName>uk_gca6cbgyickrv48tm39m6t0ib</UnderlyingIndexName>
     </key>
-    <foreign-key id="134" parent="46" name="fk9afnnirqeo2y65md8ay67g2tc">
-      <ObjectId>17150</ObjectId>
-      <StateNumber>846</StateNumber>
+    <foreign-key id="152" parent="50" name="fk9afnnirqeo2y65md8ay67g2tc">
+      <ObjectId>57579</ObjectId>
+      <StateNumber>2836</StateNumber>
       <ColNames>scheduler_id</ColNames>
-      <RefTableId>17041</RefTableId>
+      <RefTableId>57467</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>schedulers</RefTableName>
       <RefKeyName>schedulers_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="135" parent="46" name="fkhpc5eddad97uiun8lc0kw55u7">
-      <ObjectId>17145</ObjectId>
-      <StateNumber>845</StateNumber>
+    <foreign-key id="153" parent="50" name="fkhpc5eddad97uiun8lc0kw55u7">
+      <ObjectId>57574</ObjectId>
+      <StateNumber>2835</StateNumber>
       <ColNames>training_id</ColNames>
-      <RefTableId>17071</RefTableId>
+      <RefTableId>57500</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>trainings</RefTableName>
       <RefKeyName>trainings_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="136" parent="47" name="id">
+    <column id="154" parent="51" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>822</StateNumber>
+      <StateNumber>2804</StateNumber>
       <DefaultExpression>nextval(&apos;sections_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="137" parent="47" name="created_at">
+    <column id="155" parent="51" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>822</StateNumber>
+      <StateNumber>2804</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="138" parent="47" name="updated_at">
+    <column id="156" parent="51" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>822</StateNumber>
+      <StateNumber>2804</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="139" parent="47" name="section_type">
+    <column id="157" parent="51" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>822</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>2804</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="140" parent="47" name="admin_user_id">
+    <column id="158" parent="51" name="section_type">
       <Position>5</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>822</StateNumber>
-      <TypeId>20</TypeId>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2804</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="141" parent="47" name="scheduler_id">
+    <column id="159" parent="51" name="admin_user_id">
       <Position>6</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>822</StateNumber>
+      <StateNumber>2804</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="142" parent="47" name="trainer_id">
+    <column id="160" parent="51" name="scheduler_id">
       <Position>7</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>822</StateNumber>
+      <StateNumber>2804</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="143" parent="47" name="sections_pkey">
-      <ObjectId>17056</ObjectId>
-      <StateNumber>822</StateNumber>
+    <column id="161" parent="51" name="trainer_id">
+      <Position>8</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>2804</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="162" parent="51" name="sections_pkey">
+      <ObjectId>57485</ObjectId>
+      <StateNumber>2804</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="144" parent="47" name="sections_pkey">
-      <ObjectId>17057</ObjectId>
-      <StateNumber>822</StateNumber>
+    <key id="163" parent="51" name="sections_pkey">
+      <ObjectId>57486</ObjectId>
+      <StateNumber>2804</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>sections_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="145" parent="47" name="fkdpdi23acmxuod5g5lhiuiir7l">
-      <ObjectId>17155</ObjectId>
-      <StateNumber>847</StateNumber>
+    <foreign-key id="164" parent="51" name="fkdpdi23acmxuod5g5lhiuiir7l">
+      <ObjectId>57584</ObjectId>
+      <StateNumber>2837</StateNumber>
       <ColNames>admin_user_id</ColNames>
-      <RefTableId>16986</RefTableId>
+      <RefTableId>57412</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>admin_users</RefTableName>
       <RefKeyName>admin_users_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="146" parent="47" name="fklcq6xd292cbcmdleblq8o41ae">
-      <ObjectId>17160</ObjectId>
-      <StateNumber>848</StateNumber>
+    <foreign-key id="165" parent="51" name="fklcq6xd292cbcmdleblq8o41ae">
+      <ObjectId>57589</ObjectId>
+      <StateNumber>2838</StateNumber>
       <ColNames>scheduler_id</ColNames>
-      <RefTableId>17041</RefTableId>
+      <RefTableId>57467</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>schedulers</RefTableName>
       <RefKeyName>schedulers_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="147" parent="47" name="fkj2dt4p4osqjq4b95my6qb32xa">
-      <ObjectId>17165</ObjectId>
-      <StateNumber>849</StateNumber>
+    <foreign-key id="166" parent="51" name="fkj2dt4p4osqjq4b95my6qb32xa">
+      <ObjectId>57594</ObjectId>
+      <StateNumber>2839</StateNumber>
       <ColNames>trainer_id</ColNames>
-      <RefTableId>17060</RefTableId>
+      <RefTableId>57489</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tourists</RefTableName>
       <RefKeyName>tourists_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="148" parent="48" name="id">
+    <column id="167" parent="52" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
-      <DefaultExpression>nextval(&apos;tourists_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>742</StateNumber>
+      <DefaultExpression>nextval(&apos;sportsman_users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="149" parent="48" name="created_at">
+    <column id="168" parent="52" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>823</StateNumber>
+      <StateNumber>742</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="150" parent="48" name="updated_at">
+    <column id="169" parent="52" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>823</StateNumber>
+      <StateNumber>742</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="151" parent="48" name="birthday">
+    <column id="170" parent="52" name="email">
       <Position>4</Position>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
-      <TypeId>1082</TypeId>
-    </column>
-    <column id="152" parent="48" name="email">
-      <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
+      <StateNumber>742</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="153" parent="48" name="first_name">
+    <column id="171" parent="52" name="first_name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>742</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="172" parent="52" name="last_name">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
+      <StateNumber>742</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="154" parent="48" name="last_name">
+    <column id="173" parent="52" name="phone">
       <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="155" parent="48" name="password">
-      <Position>8</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="156" parent="48" name="phone">
-      <Position>9</Position>
       <DataType>varchar(25)|0s</DataType>
-      <StateNumber>823</StateNumber>
+      <StateNumber>742</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="157" parent="48" name="user_role">
-      <Position>10</Position>
+    <column id="174" parent="52" name="user_role">
+      <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
+      <StateNumber>742</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="158" parent="48" name="user_status">
-      <Position>11</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>823</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="159" parent="48" name="category">
-      <Position>12</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>823</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="160" parent="48" name="gender">
-      <Position>13</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>823</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="161" parent="48" name="tourists_pkey">
-      <ObjectId>17067</ObjectId>
-      <StateNumber>823</StateNumber>
+    <index id="175" parent="52" name="sportsman_users_pkey">
+      <ObjectId>49183</ObjectId>
+      <StateNumber>742</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="162" parent="48" name="ukt5mslnjmynyoegfkn85tnorx0">
-      <ObjectId>17093</ObjectId>
-      <StateNumber>834</StateNumber>
+    <index id="176" parent="52" name="ukg71rw31ls70o6y3stsevxwg3p">
+      <ObjectId>49203</ObjectId>
+      <StateNumber>749</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="163" parent="48" name="idxt5mslnjmynyoegfkn85tnorx0">
-      <ObjectId>17092</ObjectId>
-      <StateNumber>833</StateNumber>
+    <index id="177" parent="52" name="idxg71rw31ls70o6y3stsevxwg3p">
+      <ObjectId>49202</ObjectId>
+      <StateNumber>748</StateNumber>
       <ColNames>email</ColNames>
     </index>
-    <key id="164" parent="48" name="tourists_pkey">
-      <ObjectId>17068</ObjectId>
-      <StateNumber>823</StateNumber>
+    <key id="178" parent="52" name="sportsman_users_pkey">
+      <ObjectId>49184</ObjectId>
+      <StateNumber>742</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>sportsman_users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="179" parent="52" name="ukg71rw31ls70o6y3stsevxwg3p">
+      <ObjectId>49204</ObjectId>
+      <StateNumber>749</StateNumber>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>ukg71rw31ls70o6y3stsevxwg3p</UnderlyingIndexName>
+    </key>
+    <column id="180" parent="53" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <DefaultExpression>nextval(&apos;tourists_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="181" parent="53" name="created_at">
+      <Position>2</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="182" parent="53" name="updated_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="183" parent="53" name="birthday">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="184" parent="53" name="email">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="185" parent="53" name="first_name">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="186" parent="53" name="last_name">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="187" parent="53" name="password">
+      <Position>8</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="188" parent="53" name="phone">
+      <Position>9</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="189" parent="53" name="user_role">
+      <Position>10</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="190" parent="53" name="user_status">
+      <Position>11</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="191" parent="53" name="category">
+      <Position>12</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="192" parent="53" name="gender">
+      <Position>13</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2805</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="193" parent="53" name="tourists_pkey">
+      <ObjectId>57496</ObjectId>
+      <StateNumber>2805</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="194" parent="53" name="ukt5mslnjmynyoegfkn85tnorx0">
+      <ObjectId>57522</ObjectId>
+      <StateNumber>2824</StateNumber>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="195" parent="53" name="idxt5mslnjmynyoegfkn85tnorx0">
+      <ObjectId>57521</ObjectId>
+      <StateNumber>2822</StateNumber>
+      <ColNames>email</ColNames>
+    </index>
+    <key id="196" parent="53" name="tourists_pkey">
+      <ObjectId>57497</ObjectId>
+      <StateNumber>2805</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>tourists_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="165" parent="48" name="ukt5mslnjmynyoegfkn85tnorx0">
-      <ObjectId>17094</ObjectId>
-      <StateNumber>834</StateNumber>
+    <key id="197" parent="53" name="ukt5mslnjmynyoegfkn85tnorx0">
+      <ObjectId>57523</ObjectId>
+      <StateNumber>2824</StateNumber>
       <ColNames>email</ColNames>
       <UnderlyingIndexName>ukt5mslnjmynyoegfkn85tnorx0</UnderlyingIndexName>
     </key>
-    <column id="166" parent="49" name="id">
+    <column id="198" parent="54" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>572</StateNumber>
-      <DefaultExpression>nextval(&apos;trainer_users_id_seq&apos;::regclass)</DefaultExpression>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="167" parent="49" name="created_at">
-      <Position>2</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>572</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="168" parent="49" name="updated_at">
-      <Position>3</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>572</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="169" parent="49" name="email">
-      <Position>4</Position>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>572</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="170" parent="49" name="first_name">
-      <Position>5</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>572</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="171" parent="49" name="last_name">
-      <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>572</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="172" parent="49" name="password">
-      <Position>7</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>572</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="173" parent="49" name="phone">
-      <Position>8</Position>
-      <DataType>varchar(25)|0s</DataType>
-      <StateNumber>572</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="174" parent="49" name="user_role">
-      <Position>9</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>572</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="175" parent="49" name="user_status">
-      <Position>10</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>572</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="176" parent="49" name="trainer_users_pkey">
-      <ObjectId>16414</ObjectId>
-      <StateNumber>572</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="177" parent="49" name="ukkf7dd7p65pw7150nbk2mpib9s">
-      <ObjectId>16420</ObjectId>
-      <StateNumber>578</StateNumber>
-      <ColNames>email</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <index id="178" parent="49" name="idxkf7dd7p65pw7150nbk2mpib9s">
-      <ObjectId>16419</ObjectId>
-      <StateNumber>576</StateNumber>
-      <ColNames>email</ColNames>
-    </index>
-    <key id="179" parent="49" name="trainer_users_pkey">
-      <ObjectId>16415</ObjectId>
-      <StateNumber>572</StateNumber>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>trainer_users_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <key id="180" parent="49" name="ukkf7dd7p65pw7150nbk2mpib9s">
-      <ObjectId>16421</ObjectId>
-      <StateNumber>578</StateNumber>
-      <ColNames>email</ColNames>
-      <UnderlyingIndexName>ukkf7dd7p65pw7150nbk2mpib9s</UnderlyingIndexName>
-    </key>
-    <column id="181" parent="50" name="id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>824</StateNumber>
+      <StateNumber>2806</StateNumber>
       <DefaultExpression>nextval(&apos;trainings_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="182" parent="50" name="created_at">
+    <column id="199" parent="54" name="created_at">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>824</StateNumber>
+      <StateNumber>2806</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="183" parent="50" name="updated_at">
+    <column id="200" parent="54" name="updated_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
-      <StateNumber>824</StateNumber>
+      <StateNumber>2806</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="184" parent="50" name="time_of_training">
+    <column id="201" parent="54" name="is_completed">
       <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2806</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="202" parent="54" name="time_of_training">
+      <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>824</StateNumber>
+      <StateNumber>2806</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="185" parent="50" name="group_id">
-      <Position>5</Position>
+    <column id="203" parent="54" name="group_id">
+      <Position>6</Position>
       <DataType>bigint|0s</DataType>
-      <StateNumber>824</StateNumber>
+      <StateNumber>2806</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="186" parent="50" name="trainings_pkey">
-      <ObjectId>17075</ObjectId>
-      <StateNumber>824</StateNumber>
+    <index id="204" parent="54" name="trainings_pkey">
+      <ObjectId>57504</ObjectId>
+      <StateNumber>2806</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="187" parent="50" name="trainings_pkey">
-      <ObjectId>17076</ObjectId>
-      <StateNumber>824</StateNumber>
+    <key id="205" parent="54" name="trainings_pkey">
+      <ObjectId>57505</ObjectId>
+      <StateNumber>2806</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>trainings_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="188" parent="50" name="fkic88f79cvctuks58b1a8h8qh6">
-      <ObjectId>17170</ObjectId>
-      <StateNumber>850</StateNumber>
+    <foreign-key id="206" parent="54" name="fkic88f79cvctuks58b1a8h8qh6">
+      <ObjectId>57599</ObjectId>
+      <StateNumber>2840</StateNumber>
       <ColNames>group_id</ColNames>
-      <RefTableId>17022</RefTableId>
+      <RefTableId>57448</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>groups</RefTableName>
       <RefKeyName>groups_pkey</RefKeyName>

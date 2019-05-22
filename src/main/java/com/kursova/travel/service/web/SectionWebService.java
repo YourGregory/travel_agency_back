@@ -36,6 +36,7 @@ public class SectionWebService {
         trainerOptional.ifPresent(trainer -> {
             Section section = new Section();
             section.setAdminUser(adminUser);
+            section.setName(request.getName());
             section.setTrainer(trainer);
             section.setSectionType(request.getSectionType());
             sectionService.create(section);

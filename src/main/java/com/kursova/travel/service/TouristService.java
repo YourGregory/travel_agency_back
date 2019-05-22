@@ -7,6 +7,7 @@ import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.repository.TouristRepository;
 import com.kursova.travel.service.base.DefaultCrudSupport;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.experimental.FieldDefaults;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
