@@ -2,12 +2,14 @@ package com.kursova.travel.service.web;
 
 import com.kursova.travel.entity.dto.SectionDTO;
 import com.kursova.travel.entity.model.AdminUser;
+import com.kursova.travel.entity.model.Scheduler;
 import com.kursova.travel.entity.model.Section;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.entity.request.CreateSectionRequest;
 import com.kursova.travel.entity.request.UpdateSectionRequest;
 import com.kursova.travel.security.SystemUser;
 import com.kursova.travel.service.AdminService;
+import com.kursova.travel.service.SchedulerService;
 import com.kursova.travel.service.SectionService;
 import com.kursova.travel.service.TouristService;
 import lombok.AccessLevel;
@@ -28,6 +30,7 @@ public class SectionWebService {
     SectionService sectionService;
     AdminService adminService;
     TouristService touristService;
+    SchedulerService schedulerService;
 
     @Transactional
     public void createSection(CreateSectionRequest request, SystemUser systemUser) {
@@ -39,7 +42,12 @@ public class SectionWebService {
             section.setName(request.getName());
             section.setTrainer(trainer);
             section.setSectionType(request.getSectionType());
-            sectionService.create(section);
+            Section createdSection = sectionService.create(section);
+
+            Scheduler scheduler = new Scheduler();
+            Scheduler createdScheduler = schedulerService.create(scheduler);
+            createdSection.setScheduler(createdScheduler);
+            sectionService.update(section);
         });
     }
 

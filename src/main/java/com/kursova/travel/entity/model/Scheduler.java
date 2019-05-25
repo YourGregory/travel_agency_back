@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -24,6 +25,6 @@ public class Scheduler extends AbstractVersional {
     @OneToMany(fetch = FetchType.LAZY)
     List<Training> training = new ArrayList<>();
 
-    String place;
+    String place = StringUtils.EMPTY;
 
 }
