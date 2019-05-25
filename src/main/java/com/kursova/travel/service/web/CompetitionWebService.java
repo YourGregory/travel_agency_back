@@ -64,4 +64,12 @@ public class CompetitionWebService {
     private TouristDTO mapTouristToTouritstDto(Tourist tourist) {
         return modelMapper.map(tourist, TouristDTO.class);
     }
+
+    @Transactional(readOnly = true)
+    public List<CompetitionDTO> getAll() {
+        return competitionService.findAll().stream()
+                .map(this::mapToCompetitionDto)
+                .collect(Collectors.toList());
+    }
+
 }

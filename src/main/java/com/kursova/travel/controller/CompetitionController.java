@@ -21,6 +21,11 @@ public class CompetitionController {
 
     CompetitionWebService competitionWebService;
 
+    @GetMapping("competitions")
+    public ResponseEntity<List<CompetitionDTO>> getAll(){
+        return ResponseEntity.ok(competitionWebService.getAll());
+    }
+
     @PutMapping("competitions")
     @ResponseStatus(HttpStatus.CREATED)
     public void createCompetition(CreateCompetitionRequest request) {
