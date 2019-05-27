@@ -2,6 +2,7 @@ package com.kursova.travel.controller;
 
 import com.kursova.travel.constants.Constant;
 import com.kursova.travel.entity.dto.CompetitionDTO;
+import com.kursova.travel.entity.request.AddTouristRequest;
 import com.kursova.travel.entity.request.CreateCompetitionRequest;
 import com.kursova.travel.service.web.CompetitionWebService;
 import lombok.AccessLevel;
@@ -34,8 +35,8 @@ public class CompetitionController {
 
     @PostMapping("competitions/{competitionId}/tourists")
     public ResponseEntity<CompetitionDTO> addTourists(@PathVariable Long competitionId,
-                                                      @RequestParam List<Long> touristsIds) {
-        return ResponseEntity.ok(competitionWebService.addTourists(competitionId, touristsIds));
+                                                      @RequestBody AddTouristRequest request) {
+        return ResponseEntity.ok(competitionWebService.addTourists(competitionId, request.getTouristsIds()));
     }
 
 }
