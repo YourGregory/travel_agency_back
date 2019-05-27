@@ -28,7 +28,7 @@ public class CompetitionController {
 
     @PutMapping("competitions")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createCompetition(CreateCompetitionRequest request) {
+    public void createCompetition(@RequestBody CreateCompetitionRequest request) {
         competitionWebService.createCompetition(request);
     }
 
