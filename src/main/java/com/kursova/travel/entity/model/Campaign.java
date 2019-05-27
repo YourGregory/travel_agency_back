@@ -9,6 +9,7 @@ import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -21,14 +22,16 @@ import java.util.List;
 )
 public class Campaign extends AbstractVersional {
 
+    String name;
+
     @OneToOne(fetch = FetchType.LAZY)
     Tourist instructor;
 
     @OneToMany(fetch = FetchType.LAZY)
-    List<Route> routes;
+    List<Route> routes = new ArrayList<>();
 
     @OneToMany(fetch = FetchType.LAZY)
-    List<Tourist> tourists;
+    List<Tourist> tourists = new ArrayList<>();
 
     Boolean isPlaned;
 

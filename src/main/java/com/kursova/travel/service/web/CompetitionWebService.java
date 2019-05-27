@@ -51,6 +51,7 @@ public class CompetitionWebService {
 
     private CompetitionDTO mapToCompetitionDto(Competition competition) {
         CompetitionDTO competitionDTO = new CompetitionDTO();
+        competitionDTO.setId(competition.getId());
         competitionDTO.setTime(competition.getTime());
         competitionDTO.setName(competition.getName());
         List<TouristDTO> list = competition.getTourists().stream()
