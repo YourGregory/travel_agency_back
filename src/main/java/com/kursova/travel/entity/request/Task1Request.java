@@ -17,7 +17,5 @@ public class Task1Request {
     SectionType sectionType;
     Gender gender;
     LocalDate localDate;
-    Long sectionId;
-    Long groupId;
 
 }

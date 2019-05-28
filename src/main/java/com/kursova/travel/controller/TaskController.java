@@ -4,6 +4,7 @@ import com.kursova.travel.constants.Constant;
 import com.kursova.travel.entity.dto.TouristDTO;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.service.SchedulerService;
+import com.kursova.travel.service.SectionService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,10 +20,10 @@ import java.util.List;
 @RequestMapping(value = Constant.API_V1_PREFIX)
 public class TaskController {
 
-    SchedulerService schedulerService;
+    SectionService sectionService;
 
     public ResponseEntity<List<TouristDTO>> task1(Task1Request request) {
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(sectionService.getAllTouristByRequest(request));
     }
 
 }
