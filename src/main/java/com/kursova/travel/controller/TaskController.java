@@ -22,7 +22,7 @@ public class TaskController {
     SchedulerService schedulerService;
 
     public ResponseEntity<List<TouristDTO>> task1(Task1Request request) {
-        return ResponseEntity.ok(schedulerService.task1(request));
+        return ResponseEntity.ok(null);
     }
 
 }
