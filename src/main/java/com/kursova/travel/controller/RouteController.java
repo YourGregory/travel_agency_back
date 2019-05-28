@@ -24,7 +24,7 @@ public class RouteController {
 
     @PutMapping("routes")
     @ResponseStatus(HttpStatus.CREATED)
-    public void createRoute(CreateRouteRequest request) {
+    public void createRoute(@RequestBody CreateRouteRequest request) {
         routeWebService.createRoute(request);
     }
 
