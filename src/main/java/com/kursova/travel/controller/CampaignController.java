@@ -20,6 +20,11 @@ public class CampaignController {
 
     CampaignWebService campaignWebService;
 
+    @GetMapping(value = "campaign")
+    public ResponseEntity<List<CampaignDTO>> getAll() {
+        return ResponseEntity.ok(campaignWebService.getAllCampaign());
+    }
+
     @PutMapping(value = "campaign")
     public void createCampaign(CreateCampaignRequest request) {
         campaignWebService.createCampaign(request);

@@ -99,4 +99,10 @@ public class CampaignWebService {
         return mapToCampaignDto(updateCampaign);
     }
 
+    public List<CampaignDTO> getAllCampaign() {
+        return campaignService.findAll()
+                .stream()
+                .map(this::mapToCampaignDto)
+                .collect(Collectors.toList());
+    }
 }
