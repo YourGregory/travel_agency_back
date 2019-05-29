@@ -9,10 +9,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,7 +21,7 @@ public class TaskController {
 
     SectionService sectionService;
 
-    @GetMapping(value = "taks1")
+    @PostMapping(value = "taks1")
     public ResponseEntity<List<TouristDTO>> task1(@RequestBody Task1Request request) {
         return ResponseEntity.ok(sectionService.getAllTouristByRequest(request));
     }

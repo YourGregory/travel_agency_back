@@ -26,7 +26,7 @@ public class CampaignController {
     }
 
     @PutMapping(value = "campaign")
-    public void createCampaign(CreateCampaignRequest request) {
+    public void createCampaign(@RequestBody CreateCampaignRequest request) {
         campaignWebService.createCampaign(request);
     }
 
