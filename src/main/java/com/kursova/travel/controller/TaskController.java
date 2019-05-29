@@ -26,4 +26,9 @@ public class TaskController {
         return ResponseEntity.ok(sectionService.getAllTouristByRequest(request));
     }
 
+    @PostMapping(value = "taks2")
+    public ResponseEntity<List<TouristDTO>> task2(@RequestBody Task1Request request) {
+        return ResponseEntity.ok(sectionService.getAllTrainersByRequest(request));
+    }
+
 }

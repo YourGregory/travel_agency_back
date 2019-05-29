@@ -49,4 +49,11 @@ public class SectionService extends DefaultCrudSupport<Section> {
     private TouristDTO mapTouristToTrainerDto(Tourist tourist) {
         return modelMapper.map(tourist, TouristDTO.class);
     }
+
+    @Transactional(readOnly = true)
+    public List<TouristDTO> getAllTrainersByRequest(Task1Request request) {
+        return sectionRepository.getAllTrainersByRequest(request.getSectionType(), request.getGender(), request.getLocalDate()).stream()
+                .map(this::mapTouristToTrainerDto)
+                .collect(Collectors.toList());
+    }
 }
