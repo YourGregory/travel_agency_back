@@ -1,10 +1,9 @@
 package com.kursova.travel.service;
 
+import com.kursova.travel.entity.base.AbstractIdentifiable;
 import com.kursova.travel.entity.dictionary.UserRole;
 import com.kursova.travel.entity.dto.TouristDTO;
-import com.kursova.travel.entity.model.AdminUser;
-import com.kursova.travel.entity.model.Section;
-import com.kursova.travel.entity.model.Tourist;
+import com.kursova.travel.entity.model.*;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
 import com.kursova.travel.repository.SectionRepository;
@@ -79,5 +78,18 @@ public class SectionService extends DefaultCrudSupport<Section> {
 
     public List<AdminUser> getAllAdminsCreatedAt(LocalDate createdAt) {
         return sectionRepository.findAll().stream().map(Section::getAdminUser).filter(adminUser -> adminUser.getCreatedAt().toLocalDate().equals(createdAt)).collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public Long getCountOfTraining(Long trainerId) {
+        return sectionRepository.findAll().stream()
+                .map(Section::getScheduler)
+                .map(Scheduler::getTraining)
+                .flatMap(List::stream)
+                .map(Training::getGroup)
+                .map(Group::getTrainer)
+                .map(AbstractIdentifiable::getId)
+                .filter(trainerId::equals)
+                .count();
     }
 }

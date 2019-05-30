@@ -65,8 +65,8 @@ public class TaskController {
     }
 
     @PostMapping(value = "taks71/{trainerId}")
-    public ResponseEntity<Integer> task63(@PathVariable Long trainerId) {
-        return ResponseEntity.ok(groupService.getCountOfTraining(trainerId));
+    public ResponseEntity<Long> task63(@PathVariable Long trainerId) {
+        return ResponseEntity.ok(sectionService.getCountOfTraining(trainerId));
     }
 
 }

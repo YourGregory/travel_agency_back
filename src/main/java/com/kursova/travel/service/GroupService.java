@@ -38,7 +38,4 @@ public class GroupService extends DefaultCrudSupport<Group> {
         return groupRepository.findAllByTrainer(tourist);
     }
 
-    public Integer getCountOfTraining(Long trainerId) {
-        return 4;
-    }
 }
