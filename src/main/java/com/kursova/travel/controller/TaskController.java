@@ -4,8 +4,10 @@ import com.kursova.travel.constants.Constant;
 import com.kursova.travel.entity.dto.TouristDTO;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
+import com.kursova.travel.entity.request.Task4Request;
 import com.kursova.travel.service.SchedulerService;
 import com.kursova.travel.service.SectionService;
+import com.kursova.travel.service.TrainingService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -21,6 +23,7 @@ import java.util.List;
 public class TaskController {
 
     SectionService sectionService;
+    TrainingService trainingService;
 
     @PostMapping(value = "taks1")
     public ResponseEntity<List<TouristDTO>> task1(@RequestBody Task1Request request) {
@@ -35,6 +38,11 @@ public class TaskController {
     @PostMapping(value = "taks3")
     public ResponseEntity<List<TouristDTO>> task3(@RequestBody Task3Request request) {
         return ResponseEntity.ok(sectionService.getAllSportsmansByRequest(request));
+    }
+
+    @PostMapping(value = "taks4")
+    public ResponseEntity<List<TouristDTO>> task4(@RequestBody Task4Request request) {
+        return ResponseEntity.ok(trainingService.getAllTrainersByRequest(request));
     }
 
 }

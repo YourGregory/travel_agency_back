@@ -7,6 +7,7 @@ import com.kursova.travel.entity.model.Section;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
+import com.kursova.travel.entity.request.Task4Request;
 import com.kursova.travel.repository.SectionRepository;
 import com.kursova.travel.service.base.DefaultCrudSupport;
 import lombok.AccessLevel;
