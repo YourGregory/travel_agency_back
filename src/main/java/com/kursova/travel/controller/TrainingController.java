@@ -24,7 +24,7 @@ public class TrainingController {
 
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping(value = "trainings")
-    public void createTraining(CreateTrainingRequest request) {
+    public void createTraining(@RequestBody CreateTrainingRequest request) {
         trainingWebService.createTraining(request);
     }
 
