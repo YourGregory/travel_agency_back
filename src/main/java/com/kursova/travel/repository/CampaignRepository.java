@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface CampaignRepository extends JpaRepository<Campaign, Long> {
 
-    @Query(value = "SELECT tr from Section s inner join s.group")
-    List<Training> getAllTraining(Long sectionId);
+//    @Query(value = "SELECT tr from Section s inner join s.group")
+//    List<Training> getAllTraining(Long sectionId);
 
 }
