@@ -2,6 +2,7 @@ package com.kursova.travel.repository;
 
 import com.kursova.travel.entity.dictionary.Gender;
 import com.kursova.travel.entity.dictionary.SectionType;
+import com.kursova.travel.entity.dictionary.UserRole;
 import com.kursova.travel.entity.model.AdminUser;
 import com.kursova.travel.entity.model.Section;
 import com.kursova.travel.entity.model.Tourist;
@@ -24,5 +25,9 @@ public interface SectionRepository extends JpaRepository<Section, Long> {
     @Query(value = "SELECT tr from Section s inner join s.trainer tr" +
             " where s.sectionType =?1 and tr.gender =?2 and tr.birthday =?3")
     List<Tourist> getAllTrainersByRequest(SectionType sectionType, Gender gender, LocalDate localDate);
+
+    @Query(value = "SELECT sp from Section s inner join s.scheduler sc inner join sc.training t inner join t.group g" +
+            " inner join g.tourists as sp inner join Competition cm on g.tourists = cm.tourists where s.sectionType =?1 and sp.userRole =?2")
+    List<Tourist> getAllSportsmanByRequest(SectionType sectionType, UserRole userRole);
 
 }

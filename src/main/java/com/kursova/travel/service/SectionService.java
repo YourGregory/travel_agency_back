@@ -1,10 +1,12 @@
 package com.kursova.travel.service;
 
+import com.kursova.travel.entity.dictionary.UserRole;
 import com.kursova.travel.entity.dto.TouristDTO;
 import com.kursova.travel.entity.model.AdminUser;
 import com.kursova.travel.entity.model.Section;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.entity.request.Task1Request;
+import com.kursova.travel.entity.request.Task3Request;
 import com.kursova.travel.repository.SectionRepository;
 import com.kursova.travel.service.base.DefaultCrudSupport;
 import lombok.AccessLevel;
@@ -56,4 +58,12 @@ public class SectionService extends DefaultCrudSupport<Section> {
                 .map(this::mapTouristToTrainerDto)
                 .collect(Collectors.toList());
     }
+
+    public List<TouristDTO> getAllSportsmansByRequest(Task3Request request) {
+
+        return sectionRepository.getAllSportsmanByRequest(request.getSectionType(), UserRole.SPORTSMAN).stream()
+                .map(this::mapTouristToTrainerDto)
+                .collect(Collectors.toList());
+    }
+
 }
