@@ -3,11 +3,13 @@ package com.kursova.travel.controller;
 import com.kursova.travel.constants.Constant;
 import com.kursova.travel.entity.dto.CompetitionDTO;
 import com.kursova.travel.entity.dto.TouristDTO;
+import com.kursova.travel.entity.dto.TrainingDTO;
 import com.kursova.travel.entity.model.AdminUser;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
 import com.kursova.travel.entity.request.Task4Request;
 import com.kursova.travel.entity.request.Task61Request;
+import com.kursova.travel.service.CampaignService;
 import com.kursova.travel.service.GroupService;
 import com.kursova.travel.service.SectionService;
 import com.kursova.travel.service.TrainingService;
@@ -28,6 +30,7 @@ public class TaskController {
     SectionService sectionService;
     TrainingService trainingService;
     GroupService groupService;
+    CampaignService campaignService;
 
 
     @PostMapping(value = "taks1")
@@ -66,8 +69,13 @@ public class TaskController {
     }
 
     @PostMapping(value = "taks71/{trainerId}")
-    public ResponseEntity<Long> task63(@PathVariable Long trainerId) {
+    public ResponseEntity<Long> task71(@PathVariable Long trainerId) {
         return ResponseEntity.ok(sectionService.getCountOfTraining(trainerId));
+    }
+
+    @PostMapping(value = "taks81/{sectionId}")
+    public ResponseEntity<List<TrainingDTO>> task81(@PathVariable Long sectionId) {
+        return ResponseEntity.ok(campaignService.getTrainings(sectionId));
     }
 
 }

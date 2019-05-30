@@ -4,6 +4,7 @@ import com.kursova.travel.entity.base.AbstractIdentifiable;
 import com.kursova.travel.entity.dictionary.UserRole;
 import com.kursova.travel.entity.dto.CompetitionDTO;
 import com.kursova.travel.entity.dto.TouristDTO;
+import com.kursova.travel.entity.dto.TrainingDTO;
 import com.kursova.travel.entity.model.*;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
@@ -106,4 +107,5 @@ public class SectionService extends DefaultCrudSupport<Section> {
                 .filter(trainerId::equals)
                 .count();
     }
+
 }
