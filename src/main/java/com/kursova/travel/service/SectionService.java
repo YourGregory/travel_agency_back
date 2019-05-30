@@ -24,9 +24,10 @@ public class SectionService extends DefaultCrudSupport<Section> {
 
     ModelMapper modelMapper;
 
-    public SectionService(SectionRepository repository) {
+    public SectionService(SectionRepository repository, ModelMapper modelMapper) {
         super(repository);
         sectionRepository = repository;
+        this.modelMapper = modelMapper;
     }
 
     @Transactional(readOnly = true)
