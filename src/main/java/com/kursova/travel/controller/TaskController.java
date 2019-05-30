@@ -60,4 +60,9 @@ public class TaskController {
         return ResponseEntity.ok(sectionService.getAllAdminsBirthday(request.getBirthday()));
     }
 
+    @PostMapping(value = "taks63")
+    public ResponseEntity<List<AdminUser>> task63(@RequestBody Task61Request request) {
+        return ResponseEntity.ok(sectionService.getAllAdminsCreatedAt(request.getBirthday()));
+    }
+
 }

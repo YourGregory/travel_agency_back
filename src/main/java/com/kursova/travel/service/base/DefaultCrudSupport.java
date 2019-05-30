@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
@@ -103,4 +104,5 @@ public abstract class DefaultCrudSupport<E extends AbstractIdentifiable> impleme
     public void delete(Long id) {
         repository.deleteById(id);
     }
+
 }

@@ -76,4 +76,8 @@ public class SectionService extends DefaultCrudSupport<Section> {
     public List<AdminUser> getAllAdminsBirthday(LocalDate birthday) {
         return sectionRepository.findAll().stream().map(Section::getAdminUser).filter(adminUser -> adminUser.getBirthday().equals(birthday)).collect(Collectors.toList());
     }
+
+    public List<AdminUser> getAllAdminsCreatedAt(LocalDate createdAt) {
+        return sectionRepository.findAll().stream().map(Section::getAdminUser).filter(adminUser -> adminUser.getCreatedAt().toLocalDate().equals(createdAt)).collect(Collectors.toList());
+    }
 }
