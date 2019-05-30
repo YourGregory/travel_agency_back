@@ -4,6 +4,7 @@ import com.kursova.travel.entity.dictionary.Gender;
 import com.kursova.travel.entity.dictionary.SectionType;
 import com.kursova.travel.entity.dictionary.UserRole;
 import com.kursova.travel.entity.model.AdminUser;
+import com.kursova.travel.entity.model.Competition;
 import com.kursova.travel.entity.model.Section;
 import com.kursova.travel.entity.model.Tourist;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -26,8 +27,8 @@ public interface SectionRepository extends JpaRepository<Section, Long> {
             " where s.sectionType =?1 and tr.gender =?2 and tr.birthday =?3")
     List<Tourist> getAllTrainersByRequest(SectionType sectionType, Gender gender, LocalDate localDate);
 
-    @Query(value = "SELECT sp from Section s inner join s.scheduler sc inner join sc.training t inner join t.group g" +
+    @Query(value = "SELECT cm from Section s inner join s.scheduler sc inner join sc.training t inner join t.group g" +
             " inner join g.tourists as sp inner join Competition cm on g.tourists = cm.tourists where s.sectionType =?1 and sp.userRole =?2")
-    List<Tourist> getAllSportsmanByRequest(SectionType sectionType, UserRole userRole);
+    List<Competition> getAllSportsmanByRequest(SectionType sectionType, UserRole userRole);
 
 }

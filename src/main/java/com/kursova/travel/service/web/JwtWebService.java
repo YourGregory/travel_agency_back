@@ -161,7 +161,7 @@ public class JwtWebService {
                     .withSubject(username)
                     .withIssuedAt(Date.from(now.atZone(ZoneId.systemDefault()).toInstant()))
                     .withIssuer(issuer)
-                    .withExpiresAt(Date.from(now.plusHours(4L).atZone(ZoneId.systemDefault()).toInstant()))
+                    .withExpiresAt(Date.from(now.plusDays(4L).atZone(ZoneId.systemDefault()).toInstant()))
                     .withClaim(JWTClaim.ROLE.name(), role)
                     .sign(algorithm);
         }
