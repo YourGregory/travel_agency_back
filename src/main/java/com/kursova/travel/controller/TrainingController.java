@@ -29,7 +29,7 @@ public class TrainingController {
     }
 
     @PutMapping(value = "trainings")
-    public ResponseEntity<TrainingDTO> updateTrainingTime(UpdateTrainingTime request) {
+    public ResponseEntity<TrainingDTO> updateTrainingTime(@RequestBody UpdateTrainingTime request) {
         return ResponseEntity.ok(trainingWebService.updateTrainingTime(request));
     }
 
