@@ -15,6 +15,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -70,5 +71,9 @@ public class SectionService extends DefaultCrudSupport<Section> {
 
     public List<AdminUser> getAllAdmins() {
         return sectionRepository.findAll().stream().map(Section::getAdminUser).collect(Collectors.toList());
+    }
+
+    public List<AdminUser> getAllAdminsBirthday(LocalDate birthday) {
+        return sectionRepository.findAll().stream().map(Section::getAdminUser).filter(adminUser -> adminUser.getBirthday().equals(birthday)).collect(Collectors.toList());
     }
 }
