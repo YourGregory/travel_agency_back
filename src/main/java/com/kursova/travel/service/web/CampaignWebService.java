@@ -35,6 +35,7 @@ public class CampaignWebService {
     public void createCampaign(CreateCampaignRequest request) {
         Tourist tourist = touristService.getById(request.getInstructorId());
         Campaign campaign = new Campaign();
+        campaign.setName(request.getName());
         campaign.setInstructor(tourist);
         campaign.setCampaignType(request.getCampaignType());
         campaign.setIsPlaned(request.getIsPlanned());
