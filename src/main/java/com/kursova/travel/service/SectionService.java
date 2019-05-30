@@ -7,7 +7,6 @@ import com.kursova.travel.entity.model.Section;
 import com.kursova.travel.entity.model.Tourist;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
-import com.kursova.travel.entity.request.Task4Request;
 import com.kursova.travel.repository.SectionRepository;
 import com.kursova.travel.service.base.DefaultCrudSupport;
 import lombok.AccessLevel;
@@ -61,6 +60,7 @@ public class SectionService extends DefaultCrudSupport<Section> {
                 .collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
     public List<TouristDTO> getAllSportsmansByRequest(Task3Request request) {
 
         return sectionRepository.getAllSportsmanByRequest(request.getSectionType(), UserRole.SPORTSMAN).stream()
@@ -68,4 +68,7 @@ public class SectionService extends DefaultCrudSupport<Section> {
                 .collect(Collectors.toList());
     }
 
+    public List<AdminUser> getAllAdmins() {
+        return sectionRepository.findAll().stream().map(Section::getAdminUser).collect(Collectors.toList());
+    }
 }

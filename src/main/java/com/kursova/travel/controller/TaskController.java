@@ -2,6 +2,7 @@ package com.kursova.travel.controller;
 
 import com.kursova.travel.constants.Constant;
 import com.kursova.travel.entity.dto.TouristDTO;
+import com.kursova.travel.entity.model.AdminUser;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
 import com.kursova.travel.entity.request.Task4Request;
@@ -25,6 +26,8 @@ public class TaskController {
     SectionService sectionService;
     TrainingService trainingService;
 
+
+
     @PostMapping(value = "taks1")
     public ResponseEntity<List<TouristDTO>> task1(@RequestBody Task1Request request) {
         return ResponseEntity.ok(sectionService.getAllTouristByRequest(request));
@@ -43,6 +46,11 @@ public class TaskController {
     @PostMapping(value = "taks4")
     public ResponseEntity<List<TouristDTO>> task4(@RequestBody Task4Request request) {
         return ResponseEntity.ok(trainingService.getAllTrainersByRequest(request));
+    }
+
+    @PostMapping(value = "taks61")
+    public ResponseEntity<List<AdminUser>> task61() {
+        return ResponseEntity.ok(sectionService.getAllAdmins());
     }
 
 }
