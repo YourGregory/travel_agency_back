@@ -7,16 +7,14 @@ import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
 import com.kursova.travel.entity.request.Task4Request;
 import com.kursova.travel.entity.request.Task61Request;
+import com.kursova.travel.service.GroupService;
 import com.kursova.travel.service.SectionService;
 import com.kursova.travel.service.TrainingService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,6 +26,7 @@ public class TaskController {
 
     SectionService sectionService;
     TrainingService trainingService;
+    GroupService groupService;
 
 
     @PostMapping(value = "taks1")
@@ -63,6 +62,11 @@ public class TaskController {
     @PostMapping(value = "taks63")
     public ResponseEntity<List<AdminUser>> task63(@RequestBody Task61Request request) {
         return ResponseEntity.ok(sectionService.getAllAdminsCreatedAt(request.getBirthday()));
+    }
+
+    @PostMapping(value = "taks71/{trainerId}")
+    public ResponseEntity<Integer> task63(@PathVariable Long trainerId) {
+        return ResponseEntity.ok(groupService.getCountOfTraining(trainerId));
     }
 
 }

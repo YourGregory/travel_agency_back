@@ -99,6 +99,7 @@ public class CampaignWebService {
         return mapToCampaignDto(updateCampaign);
     }
 
+    @Transactional(readOnly = true)
     public List<CampaignDTO> getAllCampaign() {
         return campaignService.findAll()
                 .stream()

@@ -37,4 +37,8 @@ public class GroupService extends DefaultCrudSupport<Group> {
         Tourist tourist = touristRepository.findByEmail(systemUser.getUsername()).get();
         return groupRepository.findAllByTrainer(tourist);
     }
+
+    public Integer getCountOfTraining(Long trainerId) {
+        return 4;
+    }
 }
