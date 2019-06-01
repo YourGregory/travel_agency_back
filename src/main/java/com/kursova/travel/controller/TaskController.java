@@ -72,12 +72,12 @@ public class TaskController {
         return ResponseEntity.ok(sectionService.getAllAdminsCreatedAt(request.getBirthday()));
     }
 
-    @PostMapping(value = "taks71/{trainerId}")
+    @GetMapping(value = "taks71/{trainerId}")
     public ResponseEntity<Long> task71(@PathVariable Long trainerId) {
         return ResponseEntity.ok(sectionService.getCountOfTraining(trainerId));
     }
 
-    @PostMapping(value = "taks81/{sectionId}")
+    @GetMapping(value = "taks81/{sectionId}")
     public ResponseEntity<List<TrainingDTO>> task81(@PathVariable Long sectionId) {
         return ResponseEntity.ok(campaignService.getTrainings(sectionId));
     }
