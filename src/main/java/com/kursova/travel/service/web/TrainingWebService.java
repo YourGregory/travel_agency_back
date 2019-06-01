@@ -37,8 +37,9 @@ public class TrainingWebService {
         Training training = new Training();
         training.setGroup(group);
         training.setTimeOfTraining(LocalDateTime.of(request.getTimeOfTraining(), LocalTime.MIN));
+        Training createdTraining = trainingService.create(training);
 
-        section.getScheduler().getTraining().add(training);
+        section.getScheduler().getTraining().add(createdTraining);
 
         sectionService.update(section);
     }
