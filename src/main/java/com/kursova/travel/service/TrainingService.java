@@ -11,6 +11,8 @@ import lombok.experimental.FieldDefaults;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,7 +31,7 @@ public class TrainingService extends DefaultCrudSupport<Training> {
     }
 
     public List<TouristDTO> getAllTrainersByRequest(Task4Request request) {
-        return repository.getAllTrainersByRequest(request.getGroupId(), request.getStart(), request.getEnd()).stream()
+        return repository.getAllTrainersByRequest(request.getGroupId(), LocalDateTime.of(request.getStart(), LocalTime.MIN), LocalDateTime.of(request.getEnd(), LocalTime.MIN)).stream()
                 .map(this::mapTouristToTrainerDto)
                 .collect(Collectors.toList());
     }
