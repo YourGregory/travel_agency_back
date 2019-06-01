@@ -1,8 +1,6 @@
 package com.kursova.travel.entity.base;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -21,11 +19,14 @@ import java.time.LocalDateTime;
  * will be delegated to Spring Data Auditing module, so you don't
  * need to update those fields manually.
  */
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @MappedSuperclass
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @EntityListeners(AuditingEntityListener.class)
+@Data
+@NoArgsConstructor
 public abstract class AbstractVersional extends AbstractIdentifiable {
 
     @CreatedDate

@@ -2,9 +2,7 @@ package com.kursova.travel.entity.base;
 
 import com.kursova.travel.entity.dictionary.EntityStatus;
 import com.kursova.travel.entity.dictionary.UserRole;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
@@ -16,10 +14,13 @@ import java.time.LocalDate;
 /**
  * This user is able to login to application.
  */
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @MappedSuperclass
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Data
+@NoArgsConstructor
 public abstract class AbstractUser extends AbstractVersional {
 
     @Column(nullable = false, length = 100)

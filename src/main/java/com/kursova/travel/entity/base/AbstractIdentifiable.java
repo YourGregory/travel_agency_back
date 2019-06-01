@@ -1,9 +1,6 @@
 package com.kursova.travel.entity.base;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.GeneratedValue;
@@ -19,6 +16,8 @@ import javax.persistence.MappedSuperclass;
 @ToString
 @MappedSuperclass
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Data
+@NoArgsConstructor
 public abstract class AbstractIdentifiable {
 
     @Id
