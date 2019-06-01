@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -24,7 +25,7 @@ public class TrainingController {
 
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping(value = "trainings")
-    public void createTraining(@RequestBody CreateTrainingRequest request) {
+    public void createTraining(@Valid @RequestBody CreateTrainingRequest request) {
         trainingWebService.createTraining(request);
     }
 

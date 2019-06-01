@@ -24,6 +24,7 @@ public class CreateTrainingRequest {
     @NotNull
     Long groupId;
 
+    @NotNull
     LocalDate timeOfTraining;
 
 }
