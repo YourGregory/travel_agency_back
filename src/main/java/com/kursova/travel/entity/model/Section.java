@@ -23,7 +23,7 @@ public class Section extends AbstractVersional {
     @Column(nullable = false)
     String name;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     AdminUser adminUser;
 
     @OneToOne(fetch = FetchType.LAZY)
