@@ -12,6 +12,7 @@ import com.kursova.travel.service.base.DefaultCrudSupport;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,6 +26,8 @@ import java.util.stream.Collectors;
 public class SectionService extends DefaultCrudSupport<Section> {
 
     SectionRepository sectionRepository;
+
+    @Autowired
     CompetitionRepository competitionRepository;
 
     ModelMapper modelMapper;
