@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -106,6 +107,7 @@ public class SectionService extends DefaultCrudSupport<Section> {
     @Transactional(readOnly = true)
     public Long getCountOfTraining(Long trainerId) {
         return sectionRepository.findAll().stream()
+                .filter(section -> Objects.nonNull(section.getScheduler()))
                 .map(Section::getScheduler)
                 .map(Scheduler::getTraining)
                 .flatMap(List::stream)
