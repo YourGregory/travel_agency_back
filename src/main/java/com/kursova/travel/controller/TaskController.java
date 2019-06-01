@@ -55,7 +55,7 @@ public class TaskController {
     }
 
     @Transactional
-    @PostMapping(value = "taks61")
+    @GetMapping(value = "taks61")
     public ResponseEntity<List<AdminUser>> task61() {
         return ResponseEntity.ok(sectionService.getAllAdmins());
     }
