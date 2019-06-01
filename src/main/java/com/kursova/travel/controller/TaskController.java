@@ -17,6 +17,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -53,16 +54,19 @@ public class TaskController {
         return ResponseEntity.ok(trainingService.getAllTrainersByRequest(request));
     }
 
+    @Transactional
     @PostMapping(value = "taks61")
     public ResponseEntity<List<AdminUser>> task61() {
         return ResponseEntity.ok(sectionService.getAllAdmins());
     }
 
+    @Transactional
     @PostMapping(value = "taks62")
     public ResponseEntity<List<AdminUser>> task62(@RequestBody Task61Request request) {
         return ResponseEntity.ok(sectionService.getAllAdminsBirthday(request.getBirthday()));
     }
 
+    @Transactional
     @PostMapping(value = "taks63")
     public ResponseEntity<List<AdminUser>> task63(@RequestBody Task61Request request) {
         return ResponseEntity.ok(sectionService.getAllAdminsCreatedAt(request.getBirthday()));

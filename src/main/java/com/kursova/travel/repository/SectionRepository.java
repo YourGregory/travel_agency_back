@@ -27,8 +27,4 @@ public interface SectionRepository extends JpaRepository<Section, Long> {
             " where s.sectionType =?1 and tr.gender =?2 and tr.birthday =?3")
     List<Tourist> getAllTrainersByRequest(SectionType sectionType, Gender gender, LocalDate localDate);
 
-    @Query(value = "SELECT cm from Section s inner join s.scheduler sc inner join sc.training t inner join t.group g" +
-            " inner join g.tourists sp inner join Campaign cm inner join cm.tourists cs on cs.id = sp.id where s.sectionType =?1 and sp.userRole =?2")
-    List<Competition> getAllSportsmanByRequest(SectionType sectionType, UserRole userRole);
-
 }
