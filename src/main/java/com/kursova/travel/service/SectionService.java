@@ -67,6 +67,7 @@ public class SectionService extends DefaultCrudSupport<Section> {
     public List<CompetitionDTO> getCompetitionTask(Task3Request request) {
         return sectionRepository.findAll().stream()
                 .filter(section -> section.getSectionType().equals(request.getSectionType()))
+                .filter(section -> Objects.nonNull(section.getScheduler()))
                 .map(Section::getScheduler)
                 .map(Scheduler::getTraining)
                 .flatMap(List::stream)
