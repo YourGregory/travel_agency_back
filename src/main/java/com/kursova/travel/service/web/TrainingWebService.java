@@ -15,6 +15,8 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,7 +36,7 @@ public class TrainingWebService {
 
         Training training = new Training();
         training.setGroup(group);
-        training.setTimeOfTraining(request.getTimeOfTraining());
+        training.setTimeOfTraining(LocalDateTime.of(request.getTimeOfTraining(), LocalTime.MIN));
 
         section.getScheduler().getTraining().add(training);
 
