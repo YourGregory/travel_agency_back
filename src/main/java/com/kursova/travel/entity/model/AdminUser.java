@@ -1,10 +1,7 @@
 package com.kursova.travel.entity.model;
 
 import com.kursova.travel.entity.base.AbstractUser;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Entity;
@@ -15,6 +12,7 @@ import javax.persistence.UniqueConstraint;
 /**
  * user.
  */
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @Entity
@@ -25,6 +23,8 @@ import javax.persistence.UniqueConstraint;
         indexes = @Index(columnList = "email"),
         uniqueConstraints = @UniqueConstraint(columnNames = "email")
 )
+@Data
+@NoArgsConstructor
 public class AdminUser extends AbstractUser {
 
 }
