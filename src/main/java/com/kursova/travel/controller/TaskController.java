@@ -45,7 +45,7 @@ public class TaskController {
 
     @PostMapping(value = "taks3")
     public ResponseEntity<List<CompetitionDTO>> task3(@RequestBody Task3Request request) {
-        return ResponseEntity.ok(sectionService.getAllSportsmansByRequest(request));
+        return ResponseEntity.ok(sectionService.getCompetitionTask(request));
     }
 
     @PostMapping(value = "taks4")

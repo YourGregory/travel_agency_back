@@ -1,13 +1,12 @@
 package com.kursova.travel.service;
 
 import com.kursova.travel.entity.base.AbstractIdentifiable;
-import com.kursova.travel.entity.dictionary.UserRole;
 import com.kursova.travel.entity.dto.CompetitionDTO;
 import com.kursova.travel.entity.dto.TouristDTO;
-import com.kursova.travel.entity.dto.TrainingDTO;
 import com.kursova.travel.entity.model.*;
 import com.kursova.travel.entity.request.Task1Request;
 import com.kursova.travel.entity.request.Task3Request;
+import com.kursova.travel.repository.CompetitionRepository;
 import com.kursova.travel.repository.SectionRepository;
 import com.kursova.travel.service.base.DefaultCrudSupport;
 import lombok.AccessLevel;
@@ -25,6 +24,7 @@ import java.util.stream.Collectors;
 public class SectionService extends DefaultCrudSupport<Section> {
 
     SectionRepository sectionRepository;
+    CompetitionRepository competitionRepository;
 
     ModelMapper modelMapper;
 
@@ -63,9 +63,17 @@ public class SectionService extends DefaultCrudSupport<Section> {
     }
 
     @Transactional(readOnly = true)
-    public List<CompetitionDTO> getAllSportsmansByRequest(Task3Request request) {
-
-        return sectionRepository.getAllSportsmanByRequest(request.getSectionType(), UserRole.SPORTSMAN).stream()
+    public List<CompetitionDTO> getCompetitionTask(Task3Request request) {
+        return sectionRepository.findAll().stream()
+                .filter(section -> section.getSectionType().equals(request.getSectionType()))
+                .map(Section::getScheduler)
+                .map(Scheduler::getTraining)
+                .flatMap(List::stream)
+                .map(Training::getGroup)
+                .map(Group::getTourists)
+                .flatMap(List::stream)
+                .map(competitionRepository::findAllByTouristsContains)
+                .flatMap(List::stream)
                 .map(this::mapToCompetitionDto)
                 .collect(Collectors.toList());
     }
